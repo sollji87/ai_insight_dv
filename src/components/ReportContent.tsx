@@ -158,8 +158,8 @@ export default function ReportContent() {
                   </li>
                   <li><strong>SSF샵 매출 급감 대응</strong>
                     <ul>
-                      <li>MTH 매출 82백만원(YoY -70.5%) 급감 → 원인분석 및 긴급 대응</li>
-                      <li>무신사 수수료 재협상 착수 (현 37.6% → 목표 32% 이하)</li>
+                      <li>당월(26년 1월) 매출 90백만원(YoY -29.5%) 급감 → 원인분석 및 긴급 대응 (전년 할인율 55%, 과시즌 중점판매)</li>
+                      <li>무신사 수수료 재협상 착수 (현 37.2% → 목표 32% 이하)</li>
                     </ul>
                   </li>
                 </ul>
@@ -171,7 +171,7 @@ export default function ReportContent() {
                   <li><strong>자사몰 고수익 구조 확대</strong>
                     <ul>
                       <li>자사몰 직접이익률 69.0% vs 제휴몰 41.7% → 자사몰 트래픽 확대</li>
-                      <li>자사몰 매출 비중 25.1% → 30% 확대 목표</li>
+                      <li>자사몰 매출 비중 7.7% → 15% 확대 목표</li>
                       <li>자사몰 할인율 12.3% 수준 유지 전략 수립</li>
                     </ul>
                   </li>
@@ -204,8 +204,8 @@ export default function ReportContent() {
                   <li><strong>온라인 채널 포트폴리오 재편</strong>
                     <ul>
                       <li>온라인 비중 현 20.6% → 목표 35% 확대</li>
-                      <li>네이버스토어 투자 확대(직접이익률 48.0%, 제휴몰 최고 효율)</li>
-                      <li>제휴몰 유통수수료 전면 재협상(현 30.7% → 28% 이하 목표)</li>
+                      <li>네이버스토어 투자 확대(직접이익률 41.1%, 제휴몰 최고 효율)</li>
+                      <li>제휴몰 유통수수료 전면 재협상(현 29.3% → 28.0% 이하 목표)</li>
                     </ul>
                   </li>
                   <li><strong>사계절 아이템 확대</strong>
@@ -387,7 +387,7 @@ export default function ReportContent() {
                   <li><strong>다운점퍼 의존도 과다</strong> 83.7%로 계절적/기후 변화에 취약한 구조</li>
                   <li><strong>가방 재고 급증</strong> 재고주수 143.6주(전년 53.1주), TAG 23.0억(351%)</li>
                   <li><strong>아울렛 역성장</strong> YoY 91%(-9%), 직접이익률 39.3%이나 매출 감소</li>
-                  <li><strong>SSF샵 매출 급감</strong> MTH YoY -70.5%, 제휴몰 내 최대 매장 부진</li>
+                  <li><strong>SSF샵 매출 급감</strong> 당월 매출 90백만원(YoY 29.5%), 제휴몰 내 최대 매장 부진</li>
                 </ul>
               </div>
 
@@ -430,7 +430,7 @@ export default function ReportContent() {
                   <ul>
                     <li>매출 296백만원, 할인율 12.3%(전년 29.2%, <strong>-16.8%p</strong>)</li>
                     <li>유통수수료 부담 0% → 매출 증가가 곧바로 이익 전환</li>
-                    <li>카페24 폐쇄 후 온라인쇼핑몰(직) 통합 효과로 L12M +226.9%</li>
+                    <li>카페24 폐쇄 후 온라인쇼핑몰(직) 통합 효과로 최근 12개월 YoY 192%</li>
                     <li style={{ color: "#276749" }}><strong>→ 자사몰 트래픽 확대 및 브랜드 직접 프로모션 강화</strong></li>
                   </ul>
                 </div>
@@ -439,8 +439,8 @@ export default function ReportContent() {
                   <ul>
                     <li>매출 2,049백만원, 비중 53.4%로 최대 채널</li>
                     <li>할인율 12.9%(전년 34.8%, <strong>-21.9%p</strong>) 대폭 개선</li>
-                    <li>신세계강남 257백만(신규), 현대본점 141백만(+110.4%) 성장 견인</li>
-                    <li>현대중동 YoY +447.1%, 롯데대구 +87.8% 고성장</li>
+                    <li>신세계강남 257백만(신규), 현대본점 141백만(YoY 209.1%) 성장 견인</li>
+                    <li>현대중동 YoY 539%, 롯데대구 188% 고성장</li>
                   </ul>
                 </div>
                 <div className="box box-green" style={{ marginBottom: "5px" }}>
@@ -458,7 +458,7 @@ export default function ReportContent() {
                 <div className="box box-red" style={{ marginBottom: "5px" }}>
                   <div className="box-title red">아울렛 — YoY 91%, 유일한 역성장</div>
                   <ul>
-                    <li>매출 709백만원(-68백만), 전월비 -319백만원(-31.0%)</li>
+                    <li>매출 709백만원(-7백만)</li>
                     <li>현대아울렛김포 단일 매장 의존도 38.8% → 구조적 리스크</li>
                     <li>할인율 48.4%(전년 55.6%) 여전히 높은 수준</li>
                     <li style={{ color: "#c53030" }}><strong>→ 김포 의존도 완화, 여주/이천 거점 매장 육성</strong></li>
@@ -469,7 +469,7 @@ export default function ReportContent() {
                   <ul>
                     <li>매출 494백만원, 이익률 41.7%이나 성장 둔화</li>
                     <li>SSF샵 YoY -70.4%(214백만원 감소) — 유일한 역성장 매장</li>
-                    <li>무신사 수수료율 37.6%(제휴몰 내 최고) → 이익률 33.8% 최저</li>
+                    <li>무신사 수수료율 33.8%(제휴몰 내 최고) → 이익률 37.2% 제휴몰 내 최저</li>
                   </ul>
                 </div>
               </div>
@@ -481,12 +481,12 @@ export default function ReportContent() {
                 <table>
                   <tbody>
                     <tr><th>구분</th><th className="num">자사몰</th><th className="num">제휴몰</th><th className="num">격차</th></tr>
-                    <tr><td>L12M 매출</td><td className="num">1,850</td><td className="num">5,527</td><td className="num">3.0배</td></tr>
-                    <tr><td>L12M 매출YoY</td><td className="num text-green">226.9%</td><td className="num text-green">139.6%</td><td className="num">+87.3%p</td></tr>
-                    <tr><td>L12M 직접이익률</td><td className="num text-green">66.7%</td><td className="num">41.0%</td><td className="num text-green">+25.7%p</td></tr>
+                    <tr><td>최근 12개월 매출</td><td className="num">2,035</td><td className="num">6,080</td><td className="num">3.0배</td></tr>
+                    <tr><td>최근 12개월 매출YoY</td><td className="num text-green">191.8%</td><td className="num text-green">239.6%</td><td className="num">+47.8%p</td></tr>
+                    <tr><td>최근 12개월 직접이익률</td><td className="num text-green">66.7%</td><td className="num">41.0%</td><td className="num text-green">+25.7%p</td></tr>
                     <tr><td>유통수수료율</td><td className="num text-green">0.0%</td><td className="num text-red">30.7%</td><td className="num">-</td></tr>
-                    <tr><td>L12M 할인율</td><td className="num">24.3%</td><td className="num text-red">43.8%</td><td className="num">+19.5%p</td></tr>
-                    <tr style={{ background: "#e6fffa" }}><td>MTH 이익률</td><td className="num"><strong>69.0%</strong></td><td className="num">41.7%</td><td className="num text-green"><strong>+27.3%p</strong></td></tr>
+                    <tr><td>최근 12개월 할인율</td><td className="num">24.3%</td><td className="num text-red">43.8%</td><td className="num">+19.5%p</td></tr>
+                    <tr style={{ background: "#e6fffa" }}><td>당월(26년 1월) 이익률</td><td className="num"><strong>69.0%</strong></td><td className="num">41.7%</td><td className="num text-green"><strong>+27.3%p</strong></td></tr>
                   </tbody>
                 </table>
               </div>
@@ -495,14 +495,14 @@ export default function ReportContent() {
                 <div className="section-title">🏬 제휴몰 매장별 수익구조</div>
                 <table>
                   <tbody>
-                    <tr><th>매장명</th><th className="num">이익률</th><th className="num">수수료율</th><th className="num">할인율</th></tr>
-                    <tr className="success-row"><td>네이버스토어</td><td className="num"><strong>48.0%</strong></td><td className="num">29.3%</td><td className="num">36.3%</td></tr>
-                    <tr className="success-row"><td>더카트골프</td><td className="num">45.1%</td><td className="num">26.2%</td><td className="num">55.6%</td></tr>
-                    <tr><td>롯데ON</td><td className="num">41.0%</td><td className="num">26.8%</td><td className="num">34.5%</td></tr>
-                    <tr><td>SI빌리지</td><td className="num">40.9%</td><td className="num">29.2%</td><td className="num">46.3%</td></tr>
-                    <tr><td>SSG닷컴</td><td className="num">40.2%</td><td className="num">28.6%</td><td className="num">38.8%</td></tr>
-                    <tr><td>SSF샵</td><td className="num">40.1%</td><td className="num">31.6%</td><td className="num">45.9%</td></tr>
-                    <tr className="danger-row"><td>무신사</td><td className="num"><strong>33.8%</strong></td><td className="num text-red">37.6%</td><td className="num">40.2%</td></tr>
+                    <tr><th>매장명</th><th className="num">실판매액</th><th className="num">직접이익</th><th className="num">직접이익률</th><th className="num">수수료율</th><th className="num">할인율</th></tr>
+                    <tr><td>네이버스토어</td><td className="num">197</td><td className="num">74</td><td className="num">41.1%</td><td className="num">29.8%</td><td className="num">28.5%</td></tr>
+                    <tr><td>SSF샵</td><td className="num">90</td><td className="num">32</td><td className="num">39.4%</td><td className="num">30.0%</td><td className="num">34.6%</td></tr>
+                    <tr><td>SSG닷컴</td><td className="num">74</td><td className="num">31</td><td className="num">46.5%</td><td className="num">26.5%</td><td className="num">23.7%</td></tr>
+                    <tr><td>무신사</td><td className="num">62</td><td className="num">21</td><td className="num">37.2%</td><td className="num">33.8%</td><td className="num">17.4%</td></tr>
+                    <tr className="success-row"><td>SI빌리지</td><td className="num">54</td><td className="num">22</td><td className="num">44.4%</td><td className="num"><strong>25.5%</strong></td><td className="num">37.1%</td></tr>
+                    <tr><td>롯데ON</td><td className="num">13</td><td className="num">5</td><td className="num">46.4%</td><td className="num">25.6%</td><td className="num">28.4%</td></tr>
+                    <tr><td>더카트골프</td><td className="num">5</td><td className="num">2</td><td className="num">48.0%</td><td className="num">26.0%</td><td className="num">48.7%</td></tr>
                   </tbody>
                 </table>
               </div>
@@ -511,9 +511,9 @@ export default function ReportContent() {
                 <div className="insight-title">💡 온라인 채널 전략 인사이트</div>
                 <ul>
                   <li><strong>자사몰</strong>: 수수료 0%, 할인율 12.3%로 수익성 압도적 — 풀프라이스+VIP 채널 포지셔닝</li>
-                  <li><strong>네이버</strong>: 제휴몰 내 최고 이익률 48.0% — SKU 30% 확대, 검색광고 투자</li>
-                  <li><strong>무신사</strong>: 수수료 37.6%(최고) → 재협상 실패 시 투입 30% 축소, 자사몰 전환 유도</li>
-                  <li><strong>SSF샵</strong>: MTH -70.5% 급감 → 수수료 재협상(목표 28%) 및 독점 상품 투입</li>
+                  <li><strong>네이버</strong>: 제휴몰 내 최고 이익률 41.1% — SKU 30% 확대, 검색광고 투자</li>
+                  <li><strong>무신사</strong>: 수수료 33.8%(제휴몰 내 최고) → 재협상 실패 시 투입 30% 축소, 자사몰 전환 유도</li>
+                  <li><strong>SSF샵</strong>: 당월(26년 1월) -70.5% 급감 → 수수료 재협상(현재 30%, 목표 28%) 및 독점 상품 투입</li>
                 </ul>
               </div>
 
@@ -663,17 +663,17 @@ export default function ReportContent() {
                 <div className="section-title">🏆 직접이익 TOP 10 매장</div>
                 <table>
                   <tbody>
-                    <tr><th>#</th><th>매장명</th><th className="num">이익</th><th className="num">YoY</th><th className="num">이익률</th></tr>
-                    <tr className="success-row"><td>1</td><td><strong>온라인쇼핑몰(직)</strong></td><td className="num"><strong>186</strong></td><td className="num">373%</td><td className="num"><strong>69.0%</strong></td></tr>
-                    <tr className="success-row"><td>2</td><td>현대아울렛김포(직)</td><td className="num">134</td><td className="num">110%</td><td className="num">53.8%</td></tr>
-                    <tr><td>3</td><td>신세계아울렛여주(직)</td><td className="num">82</td><td className="num">195%</td><td className="num">49.0%</td></tr>
-                    <tr><td>4</td><td>신세계강남</td><td className="num">78</td><td className="num"><span className="badge-new">신규</span></td><td className="num">33.3%</td></tr>
-                    <tr><td>5</td><td>네이버스토어(제휴몰)</td><td className="num">74</td><td className="num"><span className="badge-new">신규</span></td><td className="num">41.1%</td></tr>
-                    <tr><td>6</td><td>스타필드하남(직)</td><td className="num">67</td><td className="num">195%</td><td className="num">42.8%</td></tr>
-                    <tr><td>7</td><td>신세계타임스퀘어</td><td className="num">62</td><td className="num"><span className="badge-new">신규</span></td><td className="num">38.3%</td></tr>
-                    <tr><td>8</td><td>롯데월드타워</td><td className="num">55</td><td className="num">165%</td><td className="num">34.3%</td></tr>
-                    <tr><td>9</td><td>현대무역</td><td className="num">43</td><td className="num"><span className="badge-new">신규</span></td><td className="num">33.9%</td></tr>
-                    <tr><td>10</td><td>현대본점</td><td className="num">43</td><td className="num">461%</td><td className="num">33.3%</td></tr>
+                    <tr><th>#</th><th>매장명</th><th className="num">실판매액</th><th className="num">직접이익</th><th className="num">YoY</th><th className="num">직접이익률</th></tr>
+                    <tr className="success-row"><td>1</td><td><strong>온라인쇼핑몰(직)</strong></td><td className="num">296</td><td className="num"><strong>186</strong></td><td className="num">365.4%</td><td className="num"><strong>69.0%</strong></td></tr>
+                    <tr className="success-row"><td>2</td><td>현대아울렛김포(직)</td><td className="num">275</td><td className="num">116</td><td className="num">103.3%</td><td className="num">46.3%</td></tr>
+                    <tr><td>3</td><td>신세계강남</td><td className="num">257</td><td className="num">78</td><td className="num"><span className="badge-new">신규</span></td><td className="num">33.3%</td></tr>
+                    <tr><td>4</td><td>네이버스토어(제휴몰)</td><td className="num">197</td><td className="num">74</td><td className="num"><span className="badge-new">신규</span></td><td className="num">41.1%</td></tr>
+                    <tr><td>5</td><td>스타필드하남(직)</td><td className="num">173</td><td className="num">67</td><td className="num">138.6%</td><td className="num">42.8%</td></tr>
+                    <tr><td>6</td><td>신세계아울렛여주(직)</td><td className="num">183</td><td className="num">65</td><td className="num">182.0%</td><td className="num">39.3%</td></tr>
+                    <tr><td>7</td><td>신세계타임스퀘어</td><td className="num">177</td><td className="num">62</td><td className="num"><span className="badge-new">신규</span></td><td className="num">38.3%</td></tr>
+                    <tr><td>8</td><td>롯데월드타워</td><td className="num">177</td><td className="num">55</td><td className="num">142.4%</td><td className="num">34.3%</td></tr>
+                    <tr><td>9</td><td>현대무역</td><td className="num">139</td><td className="num">43</td><td className="num"><span className="badge-new">신규</span></td><td className="num">33.9%</td></tr>
+                    <tr><td>10</td><td>현대본점</td><td className="num">141</td><td className="num">43</td><td className="num">209.1%</td><td className="num">33.3%</td></tr>
                   </tbody>
                 </table>
               </div>
@@ -695,8 +695,8 @@ export default function ReportContent() {
                 <div className="box-title green">✅ TOP 매장 성공 요인</div>
                 <ul>
                   <li><strong>온라인쇼핑몰(직)</strong>: 임대료 0원, 물류비·카드수수료만 부담 → 이익률 69.0% 독보적</li>
-                  <li><strong>아울렛(직)</strong>: 김포·여주 임대료율 10~13%로 매출 대비 효율적 운영</li>
-                  <li><strong>백화점 프리미엄</strong>: 신세계강남·타임스퀘어, 수수료율 11~17% 관리</li>
+                  <li><strong>아울렛(직)</strong>: 김포 임차료율 12.0%, 여주 임차료율 14.6%로 매출 대비 효율적 운영</li>
+                  <li><strong>백화점 프리미엄</strong>: 신세계강남, 롯데월드타워 외 유통수수료 27% 미만 관리</li>
                   <li><strong>공통점</strong>: 매출 증가율 &gt; 직접비용 증가율 구조로 이익 레버리지 실현</li>
                 </ul>
               </div>
@@ -707,34 +707,38 @@ export default function ReportContent() {
                 <div className="section-title">⚠️ 저수익/부진 매장 분석</div>
                 <table style={{ fontSize: "7.5px" }}>
                   <tbody>
-                    <tr><th>매장명</th><th className="num">이익</th><th className="num">매출YoY</th><th className="num">할인변화</th><th className="num">판단</th></tr>
+                    <tr><th>매장명</th><th className="num">실판매액</th><th className="num">이익</th><th className="num">매출YoY</th><th className="num">할인변화</th><th className="num">판단</th></tr>
+                    <tr className="warn-row">
+                      <td>커넥트현대청주(직)</td><td className="num">21</td><td className="num">-2</td><td className="num"><span className="badge-new">신규</span></td><td className="num">31.5%</td>
+                      <td className="num"><span className="badge-warn">모니터링</span></td>
+                    </tr>
+                    <tr>
+                      <td>신세계아울렛제주(직)</td><td className="num">26</td><td className="num">3</td><td className="num">78.8%</td><td className="num">-0.3%p</td>
+                      <td className="num"><span className="badge-warn">모니터링</span></td>
+                    </tr>
                     <tr className="danger-row">
-                      <td><strong>현대신촌</strong></td><td className="num">5백만</td><td className="num">9.3%</td><td className="num">-22.8%p</td>
+                      <td><strong>현대신촌</strong></td><td className="num">32</td><td className="num">5</td><td className="num">109.3%</td><td className="num">-22.8%p</td>
                       <td className="num"><span className="badge-down">클로징 검토</span></td>
                     </tr>
-                    <tr className="warn-row">
-                      <td>커넥트현대청주(직)</td><td className="num">5백만</td><td className="num">-</td><td className="num">31.5%p</td>
-                      <td className="num"><span className="badge-new">신규</span></td>
+                    <tr>
+                      <td>롯데인천close</td><td className="num">27</td><td className="num">8</td><td className="num"><span className="badge-new">신규팝업</span></td><td className="num">9.8%</td>
+                      <td className="num"><span className="badge-down">팝업폐점 완료</span></td>
                     </tr>
                     <tr className="success-row">
-                      <td>롯데대구</td><td className="num">9백만</td><td className="num">87.8%</td><td className="num">-18.6%p</td>
+                      <td>롯데대구</td><td className="num">35</td><td className="num">9</td><td className="num">187.8%</td><td className="num">-18.6%p</td>
                       <td className="num"><span className="badge-up">회복</span></td>
                     </tr>
                     <tr className="success-row">
-                      <td>스타필드수원(직)</td><td className="num">13백만</td><td className="num">27.5%</td><td className="num">-20.3%p</td>
+                      <td>스타필드수원(직)</td><td className="num">63</td><td className="num">12</td><td className="num">127.5%</td><td className="num">-20.3%p</td>
                       <td className="num"><span className="badge-up">회복</span></td>
                     </tr>
                     <tr>
-                      <td>현대천호</td><td className="num">16백만</td><td className="num text-red">-26.7%</td><td className="num">+0.3%p</td>
+                      <td>신세계아울렛시흥(직)</td><td className="num">49</td><td className="num">14</td><td className="num"><span className="badge-new">신규</span></td><td className="num">39.5%</td>
                       <td className="num"><span className="badge-warn">모니터링</span></td>
                     </tr>
-                    <tr className="success-row">
-                      <td>현대목동</td><td className="num">20백만</td><td className="num">6.4%</td><td className="num">-34.1%p</td>
-                      <td className="num"><span className="badge-up">회복</span></td>
-                    </tr>
-                    <tr className="success-row">
-                      <td>롯데본점</td><td className="num">23백만</td><td className="num">27.9%</td><td className="num">-15.7%p</td>
-                      <td className="num"><span className="badge-up">회복</span></td>
+                    <tr>
+                      <td>현대천호</td><td className="num">70</td><td className="num">16</td><td className="num">73.3%</td><td className="num">+0.3%p</td>
+                      <td className="num"><span className="badge-warn">모니터링</span></td>
                     </tr>
                   </tbody>
                 </table>
@@ -744,8 +748,8 @@ export default function ReportContent() {
                 <div className="box-title red">🚨 현대신촌 — 클로징 검토 대상</div>
                 <ul>
                   <li>할인율 32.7%→9.9%로 <strong>22.8%p 대폭 축소</strong>했음에도 직접이익 5백만원</li>
-                  <li>매출 9.3% 성장이 수익성 개선으로 이어지지 않는 <strong>구조적 문제</strong></li>
-                  <li>고정비(임대료+인건비) 대비 매출 효율 부족</li>
+                  <li>매출 109.3% 성장이 수익성 개선으로 이어지지 않는 <strong>구조적 문제</strong></li>
+                  <li>유통수수료 27%, 중간관리 수수료(22%, 최소 6백만원) 대비 효율 부족</li>
                   <li style={{ color: "#c53030" }}><strong>→ 3개월 개선 조치 후 재평가, 미달성 시 상반기 내 클로징</strong></li>
                 </ul>
               </div>
@@ -766,14 +770,13 @@ export default function ReportContent() {
                   <li><strong>롯데대구</strong>: 직접이익 <strong>+974.5%</strong>, 할인율 -18.6%p → 성공 공식 확산 추진</li>
                   <li><strong>현대목동</strong>: 할인율 47.4%→13.3%(-34.1%p), 직접이익 +18.6%</li>
                   <li><strong>스타필드수원</strong>: 직접이익 +148.8%, 할인율 -20.3%p — 직영점 모범 사례</li>
-                  <li><strong>롯데본점</strong>: 직접이익 +50.6%, 매출 +27.9% — 안정적 수익성 회복</li>
                 </ul>
               </div>
 
               <div className="insight-box">
                 <div className="insight-title">💡 매장 전략 핵심 메시지</div>
                 <div style={{ fontSize: "7.5px", lineHeight: "1.4" }}>
-                  7개 검토 매장 중 <strong>6개 매장이 할인율 정상화</strong>로 수익성 개선 중이며, <strong>현대신촌 1개만 구조적 문제</strong>로 클로징 검토 필요. 롯데대구(+974.5%) 성공 모델의 타 매장 확산이 단기 수익성 개선의 핵심 레버.
+                  8개 검토 매장 중 <strong>롯데대구(+187.8%), 스타필드수원(+127.5%) 등 회복 가능형 매장</strong>이 할인율 정상화로 수익성 개선 중이며, <strong>현대신촌 1개만 구조적 문제</strong>로 클로징 검토 필요. 신규 매장(커넥트청주, 신세계시흥) 및 팝업폐점(롯데인천) 모니터링 지속.
                 </div>
               </div>
             </div>
