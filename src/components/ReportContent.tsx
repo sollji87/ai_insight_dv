@@ -1,110 +1,9 @@
-"use client";
-
-import React, { useRef, useState, useEffect, useCallback } from "react";
-
-const STORAGE_KEY = "duvetica-report-content";
-
 export default function ReportContent() {
-  const contentRef = useRef<HTMLDivElement>(null);
-  const [isEditing, setIsEditing] = useState(false);
-  const [toast, setToast] = useState<string | null>(null);
-  const [hasSavedContent, setHasSavedContent] = useState(false);
-
-  // localStorage에서 저장된 내용 복원
-  useEffect(() => {
-    const saved = localStorage.getItem(STORAGE_KEY);
-    if (saved && contentRef.current) {
-      contentRef.current.innerHTML = saved;
-      setHasSavedContent(true);
-    }
-  }, []);
-
-  // contentEditable 토글
-  const toggleEditing = useCallback(() => {
-    if (isEditing) {
-      // 편집 모드 해제 시 - 변경 취소
-      const saved = localStorage.getItem(STORAGE_KEY);
-      if (saved && contentRef.current) {
-        contentRef.current.innerHTML = saved;
-      } else if (contentRef.current) {
-        // 저장된 게 없으면 원본으로
-        window.location.reload();
-      }
-    }
-    setIsEditing(!isEditing);
-  }, [isEditing]);
-
-  // 저장
-  const handleSave = useCallback(() => {
-    if (contentRef.current) {
-      localStorage.setItem(STORAGE_KEY, contentRef.current.innerHTML);
-      setHasSavedContent(true);
-      setIsEditing(false);
-      setToast("✅ 저장되었습니다!");
-      setTimeout(() => setToast(null), 2000);
-    }
-  }, []);
-
-  // 초기화 (원본으로 복원)
-  const handleReset = useCallback(() => {
-    if (window.confirm("저장된 수정사항을 모두 삭제하고 원본으로 복원하시겠습니까?")) {
-      localStorage.removeItem(STORAGE_KEY);
-      setHasSavedContent(false);
-      setIsEditing(false);
-      window.location.reload();
-    }
-  }, []);
-
-  // 편집 가능한 영역에 contentEditable 적용
-  useEffect(() => {
-    if (!contentRef.current) return;
-    const editableSelectors = [
-      "h1", "p", "td", "th", "li", "strong",
-      ".box-title", ".kpi-label", ".kpi-value", ".kpi-change",
-      ".big-num", ".sub", ".page-title", ".section-title",
-      ".insight-title", ".footer", ".box > div:not(.box-title)"
-    ];
-
-    const elements = contentRef.current.querySelectorAll(editableSelectors.join(","));
-    elements.forEach((el) => {
-      if (isEditing) {
-        el.setAttribute("contenteditable", "true");
-      } else {
-        el.removeAttribute("contenteditable");
-      }
-    });
-  }, [isEditing]);
 
   return (
     <>
-      {/* 편집 모드 툴바 */}
-      {isEditing && (
-        <div className="edit-toolbar">
-          <span>✏️ 편집 모드 — 텍스트를 클릭하여 수정하세요</span>
-          <div>
-            <button className="btn-save" onClick={handleSave}>💾 저장</button>
-            <button className="btn-cancel" onClick={toggleEditing}>✖ 취소</button>
-            {hasSavedContent && (
-              <button className="btn-reset" onClick={handleReset}>🔄 원본 복원</button>
-            )}
-          </div>
-        </div>
-      )}
-
-      {/* 토스트 알림 */}
-      {toast && <div className="toast">{toast}</div>}
-
-      {/* 편집 모드 토글 버튼 */}
-      <button
-        className="edit-toggle-btn"
-        onClick={isEditing ? handleSave : toggleEditing}
-        title={isEditing ? "저장" : "편집 모드"}
-      >
-        {isEditing ? "💾" : "✏️"}
-      </button>
-
       {/* 네비게이션 */}
-      <div className={`nav ${isEditing ? "" : ""}`} id="top" style={isEditing ? { top: "46px" } : undefined}>
+      <div className="nav" id="top">
         <a href="#sec1">🎯 전략 &amp; Action</a>
         <a href="#sec2">📊 Executive Summary</a>
         <a href="#sec3">📈 채널분석</a>
@@ -113,8 +12,8 @@ export default function ReportContent() {
       </div>
 
       {/* 메인 콘텐츠 */}
-      <div className={isEditing ? "editing-mode" : ""}>
-        <div className="wrap" ref={contentRef}>
+      <div>
+        <div className="wrap">
 
           {/* 헤더 */}
           <div className="header">
@@ -721,7 +620,7 @@ export default function ReportContent() {
                       <td className="num"><span className="badge-down">클로징 검토</span></td>
                     </tr>
                     <tr>
-                      <td>롯데인천close</td><td className="num">27</td><td className="num">8</td><td className="num"><span className="badge-new">신규팝업</span></td><td className="num">9.8%</td>
+                      <td>롯데인천close</td><td className="num">27</td><td className="num">8</td><td className="num"><span className="badge-new">신규</span></td><td className="num">9.8%</td>
                       <td className="num"><span className="badge-down">팝업폐점 완료</span></td>
                     </tr>
                     <tr className="success-row">
