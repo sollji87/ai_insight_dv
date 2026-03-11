@@ -1,0 +1,732 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>DUVETICA 브랜드 2026년 2월 경영 보고서</title>
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { color: #333; background: #f7fafc; font-family: "Malgun Gothic","Apple SD Gothic Neo",sans-serif; font-size: 9px; line-height: 1.3; }
+@page { size: a4; margin: 10mm; }
+.wrap { background: #fff; max-width: 210mm; min-height: 100vh; margin: 0 auto; padding: 14mm 12mm 20mm; box-shadow: 0 0 20px rgba(0,0,0,.08); }
+.header { border-bottom: 2.5px solid #1a1a2e; display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 14px; padding-bottom: 8px; }
+.header-left h1 { color: #1a1a2e; font-size: 16px; letter-spacing: -0.3px; }
+.header-left p { color: #666; font-size: 8px; margin-top: 2px; }
+.header-right { text-align: right; }
+.header-right .big-num { color: #1a1a2e; font-size: 22px; font-weight: bold; }
+.header-right .big-num span { font-size: 10px; font-weight: normal; }
+.header-right .sub { color: #666; font-size: 8px; }
+.page-title { color: #1a1a2e; border-left: 3.5px solid #1a1a2e; font-size: 12px; font-weight: bold; margin: 18px 0 10px; padding-left: 8px; }
+.divider { border: none; border-top: 1px dashed #cbd5e0; margin: 16px 0; }
+.container { display: flex; gap: 12px; }
+.left, .right { width: 50%; }
+.section { margin-bottom: 8px; }
+.section-title { color: #1a1a2e; font-size: 9px; font-weight: bold; border-bottom: 1.5px solid #1a1a2e; padding-bottom: 2px; margin-bottom: 5px; }
+table { border-collapse: collapse; width: 100%; font-size: 8px; }
+th { text-align: left; background: #f0f4f8; color: #2d3748; font-weight: bold; padding: 3px 4px; border-bottom: 1px solid #cbd5e0; }
+td { padding: 3px 4px; border-bottom: 1px solid #edf2f7; }
+.num { text-align: right; }
+.badge-up { background: #c6f6d5; color: #276749; font-size: 7px; font-weight: bold; padding: 1px 5px; border-radius: 2px; }
+.badge-down { background: #fed7d7; color: #c53030; font-size: 7px; font-weight: bold; padding: 1px 5px; border-radius: 2px; }
+.badge-warn { background: #fefcbf; color: #975a16; font-size: 7px; font-weight: bold; padding: 1px 5px; border-radius: 2px; }
+.badge-new { background: #e9d8fd; color: #553c9a; font-size: 7px; font-weight: bold; padding: 1px 5px; border-radius: 2px; }
+.kpi-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 5px; margin-bottom: 10px; }
+.kpi-box { text-align: center; background: #f7fafc; border: 1px solid #e2e8f0; border-radius: 4px; padding: 6px 5px; }
+.kpi-label { color: #718096; font-size: 7px; margin-bottom: 1px; }
+.kpi-value { color: #1a1a2e; font-size: 13px; font-weight: bold; }
+.kpi-change { font-size: 7px; margin-top: 1px; }
+.up { color: #276749; }
+.down { color: #c53030; }
+.box { border-radius: 4px; margin-bottom: 7px; padding: 7px 8px; }
+.box-red { background: #fff5f5; border-left: 3.5px solid #c53030; }
+.box-yellow { background: ivory; border-left: 3.5px solid #d69e2e; }
+.box-green { background: #f0fff4; border-left: 3.5px solid #38a169; }
+.box-blue { background: #ebf8ff; border-left: 3.5px solid #3182ce; }
+.box-gray { background: #f7fafc; border-left: 3.5px solid #718096; }
+.box-dark { background: #1a1a2e; color: #fff; border-radius: 4px; }
+.box-purple { background: #faf5ff; border-left: 3.5px solid #6b46c1; }
+.box-title { font-size: 9px; font-weight: bold; margin-bottom: 4px; }
+.box-title.red { color: #c53030; }
+.box-title.yellow { color: #975a16; }
+.box-title.green { color: #276749; }
+.box-title.blue { color: #2b6cb0; }
+.box-title.purple { color: #6b46c1; }
+ul { margin: 0; padding-left: 12px; }
+li { font-size: 8px; line-height: 1.35; margin-bottom: 2px; }
+li ul { margin-top: 1px; }
+.text-red { color: #c53030; }
+.text-green { color: #276749; }
+.grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 5px; }
+.insight-box { background: #faf5ff; border: 1px solid #d6bcfa; border-radius: 4px; margin-top: 6px; padding: 6px 8px; }
+.insight-title { color: #6b46c1; font-size: 8px; font-weight: bold; margin-bottom: 3px; }
+.highlight-row { background: #e6fffa; }
+.danger-row { background: #fed7d7; }
+.warn-row { background: #fefcbf; }
+.success-row { background: #c6f6d5; }
+.total-row { background: #f0f4f8; font-weight: bold; }
+.nav { position: sticky; top: 0; z-index: 100; background: linear-gradient(135deg,#1a1a2e,#16213e); display: flex; flex-wrap: wrap; justify-content: center; gap: 6px; padding: 8px 15px; box-shadow: 0 2px 8px rgba(0,0,0,.2); }
+.nav a { color: #fff; font-size: 9px; text-decoration: none; padding: 4px 10px; border-radius: 3px; transition: background .2s; }
+.nav a:hover { background: rgba(255,255,255,.2); }
+.nav .month-link {
+  border: 1px solid rgba(255,255,255,.45);
+  font-weight: bold;
+  letter-spacing: .2px;
+}
+.nav .month-link.active-month { background: rgba(255,255,255,.3); }
+.nav .month-sep {
+  color: rgba(255,255,255,.7);
+  align-self: center;
+  font-size: 9px;
+  user-select: none;
+}
+.scroll-top { position: fixed; bottom: 20px; right: 20px; width: 36px; height: 36px; background: #1a1a2e; color: #fff; border-radius: 50%; display: flex; justify-content: center; align-items: center; font-size: 14px; text-decoration: none; box-shadow: 0 2px 10px rgba(0,0,0,.25); transition: background .2s; }
+.scroll-top:hover { background: #16213e; }
+.footer { text-align: center; color: #a0aec0; font-size: 7px; border-top: 1.5px solid #cbd5e0; margin-top: 20px; padding-top: 8px; }
+.bar { display: inline-block; height: 6px; border-radius: 3px; vertical-align: middle; }
+.bar-blue { background: #3182ce; }
+.bar-green { background: #38a169; }
+.bar-red { background: #e53e3e; }
+.bar-yellow { background: #d69e2e; }
+.bar-purple { background: #6b46c1; }
+@media print {
+  body { background: #fff; }
+  .wrap { box-shadow: none; }
+  .nav, .scroll-top { display: none; }
+  .page-title { break-before: page; }
+  @page { size: A4; margin: 10mm 8mm; }
+}
+</style>
+</head>
+<body>
+<div class="nav" id="top">
+<a class="month-link" href="DUVETICA_Report_2026_01.html">26.01</a>
+<a class="month-link active-month" href="DUVETICA_Report_2026_02.html">&#10003; 26.02</a>
+<span class="month-sep">|</span>
+<a href="#sec1">🎯 전략 &amp; Action</a>
+<a href="#sec2">📊 Executive Summary</a>
+<a href="#sec3">📈 채널분석</a>
+<a href="#sec4">🏷️ 상품/재고</a>
+<a href="#sec5">🏪 매장효율</a>
+</div>
+
+<div class="wrap">
+
+<!-- ===== HEADER ===== -->
+<div class="header">
+<div class="header-left">
+<h1>🧥 DUVETICA 브랜드 2026년 2월 경영 보고서</h1>
+<p>경영관리팀 FP&amp;A | 보고일: 2026년 3월 11일</p>
+</div>
+<div class="header-right">
+<div class="big-num">2,172<span>백만원</span></div>
+<div class="sub">실판매출 YoY 126% (사입제외) | 영업이익률 -15.9%</div>
+</div>
+</div>
+
+<!-- ===== 1. 전략 & Action Plan ===== -->
+<div class="page-title" id="sec1">1. 전략 &amp; Action Plan - 즉시/단기/중장기 과제</div>
+<div class="container">
+<div class="left">
+
+<div class="box box-red">
+<div class="box-title red">⚡ 즉시 실행 (1개월 내)</div>
+<ul>
+<li><strong>S/S 시즌 전환 가속화</strong>
+<ul>
+<li>다운 시즌 종료 대비, 아우터(YoY +47.6%)·티셔츠(+37.3%) 매장 비중 확대</li>
+<li>경량 다운·트랜지션 아우터로 다운 수요 자연스럽게 연결</li>
+<li>차기시즌 의류 533백만원(YoY 224%) — 조기 투입 효과 극대화</li>
+</ul>
+</li>
+<li><strong>SSF샵 급감 원인 규명 및 대응</strong>
+<ul>
+<li>SSF샵 매출 46백만원(YoY -76.5%, -150백만원) — 제휴몰 역성장 최대 원인</li>
+<li>입점 조건·정책 변경·노출 축소 등 원인 파악 후 포지셔닝 전략 재정립</li>
+</ul>
+</li>
+<li><strong>적자 점포 손익 구조 긴급 진단</strong>
+<ul>
+<li>커넥트현대청주 직접이익 -9.0백만원(이익률 -138.2%) — 3개월 내 손익분기 미달 시 클로징</li>
+<li>스타필드수원 -8.1백만원(이익률 -34.6%) — YoY +42.4% 개선 추세 모니터링</li>
+</ul>
+</li>
+<li><strong>ACC 재고 리스크 관리</strong>
+<ul>
+<li>ACC 재고주수 146.3주(전년 79.4주, +66.9주) — 가방 187.8주, 기타ACC 287.2주 위험 수준</li>
+<li>가방 재고 TAG 24.4억(YoY 371%) — 집중 소진 프로모션 기획</li>
+</ul>
+</li>
+</ul>
+</div>
+
+<div class="box box-yellow">
+<div class="box-title yellow">📋 단기 실행 (1분기 내)</div>
+<ul>
+<li><strong>트레이닝·신발 카테고리 전략적 판단</strong>
+<ul>
+<li>트레이닝 YoY -90.9%, 운동화 -73.0% — 상품 철수인지 수요 이탈인지 원인 파악</li>
+<li>프리미엄 포지셔닝에 맞는 카테고리 포트폴리오 재설계</li>
+</ul>
+</li>
+<li><strong>자사몰 고수익 구조 확대</strong>
+<ul>
+<li>자사몰 직접이익률 64.7% vs 제휴몰 40.5% → 트래픽 확대 투자</li>
+<li>자사몰 매출 97백만(YoY 182%) — 성장 모멘텀 유지하며 규모 확대</li>
+</ul>
+</li>
+<li><strong>제휴몰 수수료 구조 재편</strong>
+<ul>
+<li>무신사 수수료율 33.3%(YoY +6.2%p) → 30% 이하 재협상 또는 투입 축소</li>
+<li>네이버스토어 121백만원(신규) 즉시 제휴몰 1위 — D2C 연계 확대</li>
+</ul>
+</li>
+</ul>
+</div>
+
+</div>
+<div class="right">
+
+<div class="box box-green">
+<div class="box-title green">🎯 중장기 전략 (상반기)</div>
+<ul>
+<li><strong>다운 의존도 분산 로드맵 수립</strong>
+<ul>
+<li>다운 편중도 61.0% — 시즌 전환 시 매출 급감 리스크 구조</li>
+<li>팬츠(+46.1%)·가방(+76.7%) 등 성장 카테고리 확대</li>
+<li>여름 시즌까지 커버 가능한 비다운 의류 라인업 강화</li>
+</ul>
+</li>
+<li><strong>백화점 성장 모멘텀 강화</strong>
+<ul>
+<li>백화점 YoY 167%, 비중 48.9%로 핵심 채널 → S/S 신상품 우선 투입</li>
+<li>신규 출점 8개 매장이 채널 YoY 증분의 84% 기여 — 존치 여부 검증</li>
+</ul>
+</li>
+<li><strong>채널 집중도 분산</strong>
+<ul>
+<li>직영점 스타필드하남 67.3% 독점 → 강남사옥(신규 45백만) 육성</li>
+<li>아울렛 김포·여주 2개점 83.4% 집중 → 기흥·시흥 이익률 개선</li>
+</ul>
+</li>
+</ul>
+</div>
+
+<div class="box box-dark">
+<div class="box-title" style="color:white">📌 핵심 KPI 현황 (연누적 기준)</div>
+<table style="margin-top:5px;color:white;font-size:8px">
+<tbody>
+<tr style="border-bottom:1px solid #4a5568"><th style="background:transparent;color:#a0aec0;border:none">지표</th><th class="num" style="background:transparent;color:#a0aec0;border:none">연누적</th><th class="num" style="background:transparent;color:#a0aec0;border:none">전년</th><th class="num" style="background:transparent;color:#a0aec0;border:none">증감</th></tr>
+<tr style="border-bottom:1px solid #4a5568"><td style="color:#e2e8f0;border:none">실판매출(사입제외)</td><td class="num" style="border:none">6,006백만</td><td class="num" style="border:none">4,056백만</td><td class="num" style="border:none;color:#48bb78">YoY 148%</td></tr>
+<tr style="border-bottom:1px solid #4a5568"><td style="color:#e2e8f0;border:none">영업이익</td><td class="num" style="border:none">159백만</td><td class="num" style="border:none">-573백만</td><td class="num" style="border:none;color:#48bb78">흑자전환</td></tr>
+<tr style="border-bottom:1px solid #4a5568"><td style="color:#e2e8f0;border:none">영업이익률</td><td class="num" style="border:none">2.9%</td><td class="num" style="border:none">-15.5%</td><td class="num" style="border:none;color:#48bb78">+18.4%p</td></tr>
+<tr style="border-bottom:1px solid #4a5568"><td style="color:#e2e8f0;border:none">할인율</td><td class="num" style="border:none">26.1%</td><td class="num" style="border:none">44.7%</td><td class="num" style="border:none;color:#48bb78">-18.6%p</td></tr>
+<tr style="border-bottom:1px solid #4a5568"><td style="color:#e2e8f0;border:none">25F 판매율</td><td class="num" style="border:none">50.3%</td><td class="num" style="border:none">45.2%</td><td class="num" style="border:none;color:#48bb78">+5.1%p</td></tr>
+<tr><td style="color:#e2e8f0;border:none">25F M/U(매출)</td><td class="num" style="border:none">5.88</td><td class="num" style="border:none">5.20</td><td class="num" style="border:none;color:#48bb78">+0.68</td></tr>
+</tbody>
+</table>
+</div>
+
+<div class="box box-blue">
+<div class="box-title blue">📝 경영진 핵심 메시지</div>
+<div style="font-size:8px;line-height:1.45">2월 실판매출 2,172백만원(YoY 126%)으로 <strong>전 채널 할인율 대폭 축소(-13.8%p)</strong>에도 견조한 성장을 유지하며, 연누적 영업이익 159백만원으로 <strong>흑자전환</strong>에 성공했습니다. <strong>백화점(+65.8%)</strong>이 신규 출점 효과로 핵심 성장 채널을 견인하고 있으나, <strong>판매수량 -3.5% 감소</strong>로 ASP 의존 성장의 지속가능성 점검이 필요합니다. <strong>제휴몰 역성장(-37.7%)</strong>에 대한 원인 파악과 <strong>다운 편중도 61%</strong> 완화를 위한 S/S 전환 가속화가 핵심 과제입니다.</div>
+</div>
+
+</div>
+</div>
+
+<hr class="divider">
+
+<!-- ===== 2. Executive Summary ===== -->
+<div class="page-title" id="sec2">2. Executive Summary - 핵심 실적, KPI, 주요 이슈 요약</div>
+
+<div class="section">
+<div class="section-title">📊 핵심 경영 지표 (당월)</div>
+<div class="kpi-grid">
+<div class="kpi-box">
+<div class="kpi-label">실판매출 (사입제외)</div>
+<div class="kpi-value">2,172<span style="font-size:9px">백만원</span></div>
+<div class="kpi-change up">▲ YoY 126% (+442백만원)</div>
+</div>
+<div class="kpi-box">
+<div class="kpi-label">영업이익</div>
+<div class="kpi-value text-red">-314<span style="font-size:9px">백만원</span></div>
+<div class="kpi-change up">▲ 적자축소 (+255백만원)</div>
+</div>
+<div class="kpi-box">
+<div class="kpi-label">영업이익률</div>
+<div class="kpi-value">-15.9%</div>
+<div class="kpi-change up">▲ +20.2%p (전년 -36.1%)</div>
+</div>
+<div class="kpi-box">
+<div class="kpi-label">할인율</div>
+<div class="kpi-value text-green">28.9%</div>
+<div class="kpi-change up">▲ -13.8%p (전년 42.7%)</div>
+</div>
+</div>
+<div class="kpi-grid" style="margin-top:5px">
+<div class="kpi-box">
+<div class="kpi-label">직접이익</div>
+<div class="kpi-value">634<span style="font-size:9px">백만원</span></div>
+<div class="kpi-change up">▲ YoY 163% (+152백만원)</div>
+</div>
+<div class="kpi-box">
+<div class="kpi-label">직접이익률</div>
+<div class="kpi-value">32.1%</div>
+<div class="kpi-change up">▲ +1.5%p (전년 30.6%)</div>
+</div>
+<div class="kpi-box">
+<div class="kpi-label">점당매출</div>
+<div class="kpi-value">59<span style="font-size:9px">백만원</span></div>
+<div class="kpi-change up">▲ YoY 118%</div>
+</div>
+<div class="kpi-box">
+<div class="kpi-label">인당매출</div>
+<div class="kpi-value">95<span style="font-size:9px">백만원</span></div>
+<div class="kpi-change up">▲ YoY 109%</div>
+</div>
+</div>
+</div>
+
+<div class="container">
+<div class="left">
+
+<div class="section">
+<div class="section-title">📈 채널별 실적 요약 (당월)</div>
+<table>
+<tbody>
+<tr><th>채널</th><th class="num">매출</th><th class="num">YoY</th><th class="num">이익률</th><th class="num">비중</th></tr>
+<tr><td>백화점</td><td class="num">1,061</td><td class="num"><span class="badge-up">167%</span></td><td class="num">26.0%</td><td class="num">48.9%</td></tr>
+<tr><td>아울렛</td><td class="num">490</td><td class="num"><span class="badge-down">92%</span></td><td class="num">34.8%</td><td class="num">22.5%</td></tr>
+<tr class="highlight-row"><td><strong>제휴몰</strong></td><td class="num"><strong>307</strong></td><td class="num"><span class="badge-down">79%</span></td><td class="num">40.5%</td><td class="num">14.1%</td></tr>
+<tr><td>직영점</td><td class="num">217</td><td class="num"><span class="badge-up">182%</span></td><td class="num">29.5%</td><td class="num">10.0%</td></tr>
+<tr class="highlight-row"><td><strong>자사몰</strong></td><td class="num"><strong>97</strong></td><td class="num"><span class="badge-up">182%</span></td><td class="num">64.7%</td><td class="num">4.5%</td></tr>
+</tbody>
+</table>
+</div>
+
+<div class="section">
+<div class="section-title">🏷️ 아이템별 실적 요약 (당월)</div>
+<table>
+<tbody>
+<tr><th>카테고리</th><th class="num">매출</th><th class="num">YoY</th><th class="num">비중</th></tr>
+<tr class="highlight-row"><td><strong>25F 의류</strong></td><td class="num"><strong>956</strong></td><td class="num"><span class="badge-up">118%</span></td><td class="num">44.0%</td></tr>
+<tr><td>과시즌 의류</td><td class="num">578</td><td class="num"><span class="badge-warn">100%</span></td><td class="num">26.6%</td></tr>
+<tr class="success-row"><td><strong>차기시즌 의류</strong></td><td class="num"><strong>533</strong></td><td class="num"><span class="badge-up">224%</span></td><td class="num">24.5%</td></tr>
+<tr><td>가방</td><td class="num">48</td><td class="num"><span class="badge-up">184%</span></td><td class="num">2.2%</td></tr>
+<tr><td>신발</td><td class="num">40</td><td class="num"><span class="badge-down">73%</span></td><td class="num">1.9%</td></tr>
+<tr><td>모자</td><td class="num">13</td><td class="num"><span class="badge-down">72%</span></td><td class="num">0.6%</td></tr>
+<tr><td>기타ACC</td><td class="num">5</td><td class="num"><span class="badge-down">89%</span></td><td class="num">0.2%</td></tr>
+</tbody>
+</table>
+</div>
+
+<div class="section">
+<div class="section-title">🏪 운영 효율</div>
+<table>
+<tbody>
+<tr><th>지표</th><th class="num">실적</th><th class="num">증감</th></tr>
+<tr><td>매장수</td><td class="num">30개</td><td class="num text-green">+4개</td></tr>
+<tr><td>점당매출</td><td class="num">59백만</td><td class="num text-green">+18%</td></tr>
+<tr><td>인원수</td><td class="num">23명</td><td class="num text-green">+3명</td></tr>
+<tr><td>인당인건비</td><td class="num">9.2백만</td><td class="num">YoY 111%</td></tr>
+</tbody>
+</table>
+</div>
+
+</div>
+<div class="right">
+
+<div class="box box-red">
+<div class="box-title red">🔴 Critical Risk</div>
+<ul>
+<li><strong>판매수량 -3.5% 감소</strong> 매출 성장이 ASP 의존(단가 상승) 구조 — 볼륨 기반 성장 전환 필요</li>
+<li><strong>다운 편중도 61.0%</strong> 단일 카테고리가 6할 이상 → 시즌 전환 시 급감 리스크</li>
+<li><strong>제휴몰 역성장 -37.7%</strong> SSF샵 -76.5%(-150백만원) 급감, 무신사 -34.3%, SSG닷컴 -30.5%</li>
+<li><strong>트레이닝 -90.9% 급감</strong> 5.4억→0.5억 사실상 소멸 수준, 운동화 -73.0% 동반 급감</li>
+<li><strong>ACC 재고주수 146.3주</strong> 가방 187.8주, 기타ACC 287.2주 — 전년 79.4주 대비 급증</li>
+</ul>
+</div>
+
+<div class="box box-green">
+<div class="box-title green">🟢 Positive Signal</div>
+<ul>
+<li><strong>연누적 흑자전환</strong> 영업이익 159백만원(전년 -573백만원 → +732백만원 개선)</li>
+<li><strong>할인율 대폭 개선</strong> 당월 28.9%(전년 42.7%, -13.8%p) / 연누적 26.1%(-18.6%p)</li>
+<li><strong>백화점 +65.8%</strong> 신규 출점 효과 + 비중 48.9%로 핵심 성장 견인</li>
+<li><strong>자사몰 YoY 182%</strong> 직접이익률 64.7%, 전 채널 최고 수익 채널</li>
+<li><strong>차기시즌 의류 YoY 224%</strong> 533백만원으로 S/S 조기 투입 성과</li>
+<li><strong>전 체인 손익 성장 > 매출 성장</strong> 롯데·현대·신세계·스타필드 모두 이익률 개선 확인</li>
+</ul>
+</div>
+
+<div class="box box-blue">
+<div class="box-title blue">💡 2월 Key Point</div>
+<ul>
+<li>당월 적자 -314백만원이나 전년(-568백만원) 대비 적자폭 대폭 축소(+255백만원)</li>
+<li>영업비 817백만원(YoY 93%, -59백만원) — 영업비율 41.3%(전년 55.6%, -14.3%p)</li>
+<li>매출원가율 21.4%(전년 23.4%, -2.0%p) 원가경쟁력 지속 강화</li>
+<li>25F 판매율 50.3%(전년 45.2%, +5.1%p) — 다운점퍼 61.0%(+7.8%p)</li>
+<li>기말재고 538.3억(YoY 131%) — 차기시즌 의류 166% 증가(S/S 선입고)</li>
+</ul>
+</div>
+
+</div>
+</div>
+
+<hr class="divider">
+
+<!-- ===== 3. 채널별 상세분석 ===== -->
+<div class="page-title" id="sec3">3. 채널별 상세 분석 - 고성장 vs 부진 채널, 온라인 수익구조</div>
+<div class="container">
+<div class="left">
+
+<div class="section">
+<div class="section-title">🚀 고성장 채널 분석</div>
+<div class="box box-green" style="margin-bottom:5px">
+<div class="box-title green">백화점 — YoY 167%, 이익률 26.0%</div>
+<ul>
+<li>매출 1,061백만원, 비중 48.9%로 최대 채널</li>
+<li>할인율 13.8%(전년 33.5%, <strong>-19.7%p</strong>) — 정가 판매력 대폭 강화</li>
+<li>신규 출점 8개 매장이 채널 YoY 증분(+426백만원)의 84% 기여</li>
+<li>롯데월드타워 146백만(+60.4%), 신세계타임스퀘어 91백만(신규), 신세계강남 89백만(신규)</li>
+<li style="color:#276749"><strong>→ S/S 신상품 우선 투입 및 팝업 등 브랜드 경험 강화</strong></li>
+</ul>
+</div>
+<div class="box box-green" style="margin-bottom:5px">
+<div class="box-title green">직영점 — YoY 182%, 이익률 29.5%</div>
+<ul>
+<li>매출 217백만원, 스타필드하남 146백만원(채널 67.3%)</li>
+<li>강남사옥 45백만원(신규) — 채널 성장(+82.4%)의 절반 기여</li>
+<li>이익률 +15.1%p 급개선(전년 14.4% → 29.5%)</li>
+<li style="color:#c53030"><strong>→ 스타필드수원 -8.1백만원 적자 — 하남 의존도 완화 필요</strong></li>
+</ul>
+</div>
+<div class="box box-green" style="margin-bottom:5px">
+<div class="box-title green">자사몰 — YoY 182%, 이익률 64.7%</div>
+<ul>
+<li>매출 97백만원, 할인율 18.0%(전년 32.8%, -14.8%p)</li>
+<li>유통수수료 0% → 전 채널 최고 수익 구조 확인</li>
+<li style="color:#276749"><strong>→ 트래픽 확대 투자로 이익률 64.7% 구조를 규모화</strong></li>
+</ul>
+</div>
+</div>
+
+<div class="section">
+<div class="section-title">⚠️ 부진/리스크 채널 분석</div>
+<div class="box box-red" style="margin-bottom:5px">
+<div class="box-title red">제휴몰 — YoY 79%, 역성장 심화</div>
+<ul>
+<li>매출 307백만원(-37.7%, -약 1.4억원) — 전 채널 중 유일한 역성장</li>
+<li>SSF샵 46백만원(-76.5%) 제휴몰 역성장 최대 원인</li>
+<li>네이버스토어 121백만원(신규) 제휴몰 1위 등극 — 기존 채널 이탈 시그널</li>
+<li>무신사 수수료 33.3%(+6.2%p), 이익률 35.6%로 제휴몰 내 최저</li>
+<li style="color:#c53030"><strong>→ 네이버스토어 제외 실질 감소 -204백만원, 채널 재편 필요</strong></li>
+</ul>
+</div>
+<div class="box box-yellow" style="margin-bottom:5px">
+<div class="box-title yellow">아울렛 — YoY 92%, 소폭 역성장</div>
+<ul>
+<li>매출 490백만원(-44백만원, -8.3%) — 현대김포 -9.4% 주도</li>
+<li>신세계여주 +125.0%로 채널 내 1위 등극(여주 35.0% vs 김포 31.7%)</li>
+<li>할인율 51.4%(전년 50.8%, +0.7%p) — 유일하게 할인율 소폭 상승</li>
+<li style="color:#975a16"><strong>→ 김포·여주 2개점 66.7% 집중 — 소수 점포 의존 리스크</strong></li>
+</ul>
+</div>
+</div>
+
+</div>
+<div class="right">
+
+<div class="section">
+<div class="section-title">🌐 온라인 수익구조 분석 (자사몰 vs 제휴몰)</div>
+<table>
+<tbody>
+<tr><th>구분</th><th class="num">자사몰</th><th class="num">제휴몰</th><th class="num">격차</th></tr>
+<tr><td>당월 매출</td><td class="num">97</td><td class="num">307</td><td class="num">3.2배</td></tr>
+<tr><td>당월 매출 YoY</td><td class="num text-green">182%</td><td class="num text-red">79%</td><td class="num">+103%p</td></tr>
+<tr><td>당월 직접이익률</td><td class="num text-green">64.7%</td><td class="num">40.5%</td><td class="num text-green">+24.2%p</td></tr>
+<tr><td>유통수수료율</td><td class="num text-green">0.0%</td><td class="num text-red">28.4%</td><td class="num">-</td></tr>
+<tr><td>당월 할인율</td><td class="num">18.0%</td><td class="num text-red">33.4%</td><td class="num">+15.4%p</td></tr>
+<tr style="background:#e6fffa"><td>당월(26년 2월) 이익률</td><td class="num"><strong>64.7%</strong></td><td class="num">40.5%</td><td class="num text-green"><strong>+24.2%p</strong></td></tr>
+</tbody>
+</table>
+</div>
+
+<div class="section">
+<div class="section-title">🏬 제휴몰 매장별 수익구조</div>
+<table>
+<tbody>
+<tr><th>매장명</th><th class="num">실판매액</th><th class="num">매출YoY</th><th class="num">이익률</th><th class="num">수수료율</th><th class="num">할인율</th></tr>
+<tr><td>네이버스토어</td><td class="num">121</td><td class="num"><span class="badge-new">신규</span></td><td class="num">42.0%</td><td class="num">27.6%</td><td class="num">33.6%</td></tr>
+<tr><td>SI빌리지</td><td class="num">56</td><td class="num">-16.6%</td><td class="num">40.5%</td><td class="num">26.2%</td><td class="num">37.2%</td></tr>
+<tr class="danger-row"><td>SSF샵</td><td class="num">46</td><td class="num text-red">-76.5%</td><td class="num">37.5%</td><td class="num">31.1%</td><td class="num">51.1%</td></tr>
+<tr><td>SSG닷컴</td><td class="num">41</td><td class="num">-30.2%</td><td class="num">38.9%</td><td class="num">29.4%</td><td class="num">41.6%</td></tr>
+<tr class="warn-row"><td>무신사</td><td class="num">24</td><td class="num">-31.9%</td><td class="num">35.6%</td><td class="num text-red">33.3%</td><td class="num">41.1%</td></tr>
+<tr class="success-row"><td>롯데ON</td><td class="num">15</td><td class="num text-green">+355%</td><td class="num">45.5%</td><td class="num">25.7%</td><td class="num">32.9%</td></tr>
+<tr><td>더카트골프</td><td class="num">5</td><td class="num text-red">-84.3%</td><td class="num">54.8%</td><td class="num">25.3%</td><td class="num">50.7%</td></tr>
+</tbody>
+</table>
+</div>
+
+<div class="insight-box">
+<div class="insight-title">💡 온라인 채널 전략 인사이트</div>
+<ul>
+<li><strong>자사몰</strong>: 수수료 0%, 할인율 18.0%로 수익성 압도적 — 트래픽 확대 투자 최우선</li>
+<li><strong>네이버</strong>: 신규 즉시 121백만원 제휴몰 1위 — 연간 목표 설정 및 자사몰 연계</li>
+<li><strong>무신사</strong>: 수수료 33.3%(+6.2%p) 급등 — 이익률 35.6% 추가 악화 시 축소 검토</li>
+<li><strong>SSF샵</strong>: -76.5% 급감, 이익률 52.4%→37.5%(-14.9%p) — 채널 붕괴 신호, 원인 규명 시급</li>
+<li><strong>롯데ON</strong>: +355% 성장, 이익률 45.5%(제휴몰 최고) — 확대 대상 채널</li>
+</ul>
+</div>
+
+<div class="section" style="margin-top:6px">
+<div class="section-title">📊 채널별 할인율 변화 (전년 → 당해)</div>
+<table>
+<tbody>
+<tr><th>채널</th><th class="num">전년</th><th class="num">당해</th><th class="num">증감</th></tr>
+<tr class="success-row"><td>백화점</td><td class="num">33.5%</td><td class="num">13.8%</td><td class="num text-green"><strong>-19.7%p</strong></td></tr>
+<tr class="success-row"><td>직영점</td><td class="num">31.4%</td><td class="num">8.5%</td><td class="num text-green"><strong>-22.8%p</strong></td></tr>
+<tr class="success-row"><td>자사몰</td><td class="num">32.8%</td><td class="num">18.0%</td><td class="num text-green"><strong>-14.8%p</strong></td></tr>
+<tr class="success-row"><td>제휴몰</td><td class="num">46.7%</td><td class="num">33.4%</td><td class="num text-green"><strong>-13.3%p</strong></td></tr>
+<tr><td>아울렛</td><td class="num">50.8%</td><td class="num">51.4%</td><td class="num text-red">+0.7%p</td></tr>
+</tbody>
+</table>
+</div>
+
+</div>
+</div>
+
+<hr class="divider">
+
+<!-- ===== 4. 상품/재고 분석 ===== -->
+<div class="page-title" id="sec4">4. 상품/재고 분석 - 시즌 판매율, 원가율, 재고 리스크</div>
+<div class="container">
+<div class="left">
+
+<div class="section">
+<div class="section-title">📈 25F 의류 판매율 분석</div>
+<table>
+<tbody>
+<tr><th>아이템</th><th class="num">판매율</th><th class="num">전년</th><th class="num">증감</th></tr>
+<tr class="success-row"><td><strong>다운점퍼</strong></td><td class="num"><strong>61.0%</strong></td><td class="num">53.2%</td><td class="num text-green">+7.8%p</td></tr>
+<tr><td>반팔다운</td><td class="num">49.3%</td><td class="num">86.0%</td><td class="num text-red">-36.7%p</td></tr>
+<tr><td>팬츠</td><td class="num">30.0%</td><td class="num">20.9%</td><td class="num text-green">+9.1%p</td></tr>
+<tr><td>니트풀오버</td><td class="num">19.2%</td><td class="num">30.7%</td><td class="num text-red">-11.5%p</td></tr>
+<tr><td>방풍자켓</td><td class="num">14.2%</td><td class="num">46.4%</td><td class="num text-red">-32.2%p</td></tr>
+<tr class="total-row"><td><strong>전체</strong></td><td class="num"><strong>50.3%</strong></td><td class="num">45.2%</td><td class="num text-green"><strong>+5.1%p</strong></td></tr>
+</tbody>
+</table>
+</div>
+
+<div class="section">
+<div class="section-title">🎯 25F M/U (마크업) 분석</div>
+<table>
+<tbody>
+<tr><th>아이템</th><th class="num">발주M/U</th><th class="num">전년</th><th class="num">증감</th></tr>
+<tr><td>반팔다운</td><td class="num">6.51</td><td class="num">6.60</td><td class="num text-red">-0.09</td></tr>
+<tr><td>다운점퍼</td><td class="num">5.97</td><td class="num">5.24</td><td class="num text-green">+0.73</td></tr>
+<tr><td>니트풀오버</td><td class="num">4.73</td><td class="num">4.57</td><td class="num text-green">+0.16</td></tr>
+<tr><td>방풍자켓</td><td class="num">4.59</td><td class="num">4.81</td><td class="num text-red">-0.22</td></tr>
+<tr><td>팬츠</td><td class="num">4.02</td><td class="num">3.78</td><td class="num text-green">+0.24</td></tr>
+<tr class="total-row"><td><strong>전체(발주)</strong></td><td class="num"><strong>5.54</strong></td><td class="num">4.92</td><td class="num text-green"><strong>+0.62</strong></td></tr>
+<tr class="total-row"><td><strong>전체(매출)</strong></td><td class="num"><strong>5.88</strong></td><td class="num">5.20</td><td class="num text-green"><strong>+0.68</strong></td></tr>
+</tbody>
+</table>
+</div>
+
+<div class="section">
+<div class="section-title">📦 기말재고 현황 (TAG 기준)</div>
+<table>
+<tbody>
+<tr><th>카테고리</th><th class="num">재고</th><th class="num">YoY</th></tr>
+<tr><td>과시즌 의류</td><td class="num">22,310백만</td><td class="num">111%</td></tr>
+<tr><td>25F 의류</td><td class="num">16,017백만</td><td class="num">141%</td></tr>
+<tr><td>차기시즌 의류</td><td class="num">10,978백만</td><td class="num">166%</td></tr>
+<tr class="danger-row"><td><strong>가방</strong></td><td class="num"><strong>2,444백만</strong></td><td class="num text-red"><strong>371%</strong></td></tr>
+<tr><td>신발</td><td class="num">1,052백만</td><td class="num text-green">71%</td></tr>
+<tr><td>모자</td><td class="num">635백만</td><td class="num text-green">92%</td></tr>
+<tr><td>기타ACC</td><td class="num">396백만</td><td class="num">194%</td></tr>
+<tr class="total-row"><td><strong>합계</strong></td><td class="num"><strong>538.3억</strong></td><td class="num"><strong>131%</strong></td></tr>
+</tbody>
+</table>
+</div>
+
+</div>
+<div class="right">
+
+<div class="section">
+<div class="section-title">🏭 25FW 원가율 분석 (글로벌 물량, 발주 기준)</div>
+<table>
+<tbody>
+<tr><th>카테고리</th><th class="num">원가율</th><th class="num">24F대비</th><th class="num">평균TAG</th><th class="num">생산수량</th></tr>
+<tr class="success-row"><td>BAG</td><td class="num">16.5%</td><td class="num text-green">-6.2%p</td><td class="num">375,987</td><td class="num">2K(64%)</td></tr>
+<tr><td>OUTER</td><td class="num">17.3%</td><td class="num text-green">-2.5%p</td><td class="num">1,112,280</td><td class="num">25K(49%)</td></tr>
+<tr class="total-row"><td><strong>전체</strong></td><td class="num"><strong>18.1%</strong></td><td class="num text-green"><strong>-2.2%p</strong></td><td class="num">792,028</td><td class="num">42K(51%)</td></tr>
+<tr><td>HEADWEAR</td><td class="num">18.2%</td><td class="num text-red">+0.3%p</td><td class="num">188,571</td><td class="num">1K(41%)</td></tr>
+<tr><td>ACC_ETC</td><td class="num">19.8%</td><td class="num text-green">-0.1%p</td><td class="num">238,000</td><td class="num">2K(47%)</td></tr>
+<tr><td>INNER</td><td class="num">22.1%</td><td class="num text-red">+0.3%p</td><td class="num">341,108</td><td class="num">7K(60%)</td></tr>
+<tr><td>BOTTOM</td><td class="num">24.8%</td><td class="num text-green">-1.4%p</td><td class="num">333,053</td><td class="num">6K(51%)</td></tr>
+</tbody>
+</table>
+</div>
+
+<div class="section">
+<div class="section-title">📊 원가 구성 변화 (주요 아이템, 전체기준)</div>
+<table>
+<tbody>
+<tr><th>아이템</th><th class="num">원부자재</th><th class="num">공임</th><th class="num">마진</th><th class="num">전체증감</th></tr>
+<tr class="success-row"><td>다운점퍼</td><td class="num">-0.71%p</td><td class="num text-green">-1.57%p</td><td class="num">-0.04%p</td><td class="num text-green"><strong>-2.45%p</strong></td></tr>
+<tr><td>반팔다운</td><td class="num">-0.49%p</td><td class="num text-red">+1.09%p</td><td class="num">+0.05%p</td><td class="num">+0.19%p</td></tr>
+<tr class="success-row"><td>팬츠</td><td class="num text-green">-4.49%p</td><td class="num text-green">-1.32%p</td><td class="num">-0.73%p</td><td class="num text-green"><strong>-6.15%p</strong></td></tr>
+<tr class="success-row"><td>토드백</td><td class="num">-1.01%p</td><td class="num text-green">-1.07%p</td><td class="num">-0.31%p</td><td class="num text-green"><strong>-4.04%p</strong></td></tr>
+<tr class="success-row"><td>백팩</td><td class="num text-green">-3.50%p</td><td class="num text-green">-1.60%p</td><td class="num">-0.69%p</td><td class="num text-green"><strong>-7.16%p</strong></td></tr>
+</tbody>
+</table>
+</div>
+
+<div class="box box-red">
+<div class="box-title red">⚠️ ACC 재고 리스크</div>
+<table style="font-size:7.5px">
+<tbody>
+<tr><th>아이템</th><th class="num">재고주수</th><th class="num">전년</th><th class="num">판단</th></tr>
+<tr class="danger-row"><td><strong>기타ACC</strong></td><td class="num text-red"><strong>287.2주</strong></td><td class="num">87.7주</td><td class="num"><span class="badge-down">위험</span></td></tr>
+<tr class="danger-row"><td><strong>가방</strong></td><td class="num text-red"><strong>187.8주</strong></td><td class="num">76.2주</td><td class="num"><span class="badge-down">위험</span></td></tr>
+<tr class="warn-row"><td>모자</td><td class="num">150.7주</td><td class="num">93.1주</td><td class="num"><span class="badge-warn">주의</span></td></tr>
+<tr class="warn-row"><td>신발</td><td class="num">85.3주</td><td class="num">74.7주</td><td class="num"><span class="badge-warn">주의</span></td></tr>
+<tr class="total-row"><td><strong>평균</strong></td><td class="num"><strong>146.3주</strong></td><td class="num">79.4주</td><td class="num text-red">+66.9주</td></tr>
+</tbody>
+</table>
+</div>
+
+<div class="insight-box">
+<div class="insight-title">💡 상품 전략 인사이트</div>
+<ul>
+<li><strong>원가 경쟁력 지속</strong>: 25FW 전체 원가율 18.1%(24F대비 -2.2%p), 다운점퍼 -2.45%p 개선</li>
+<li><strong>다운점퍼 집중도 84.4%</strong>: 단일 아이템이 전체 매출 방향성 결정 — 포트폴리오 다변화 시급</li>
+<li><strong>팬츠 원가율 대폭 개선</strong>: -6.15%p로 평균원가 전년비 80% — 성장 카테고리로 육성 가능</li>
+<li><strong>비니 원부자재 +10.49%p 급등</strong>: 소비 비중은 낮으나 단위 원가 이상 징후 모니터링</li>
+</ul>
+</div>
+
+</div>
+</div>
+
+<hr class="divider">
+
+<!-- ===== 5. 매장 효율성 ===== -->
+<div class="page-title" id="sec5">5. 매장 효율성 - TOP/Bottom 매장, 저수익 매장, 클로징 검토 대상</div>
+<div class="container">
+<div class="left">
+
+<div class="section">
+<div class="section-title">🏆 직접이익 TOP 10 매장 (당월)</div>
+<table>
+<tbody>
+<tr><th>#</th><th>매장명</th><th class="num">실판매액</th><th class="num">직접이익</th><th class="num">YoY</th><th class="num">이익률</th></tr>
+<tr class="success-row"><td>1</td><td><strong>현대아울렛김포(직)</strong></td><td class="num">155</td><td class="num"><strong>70</strong></td><td class="num">105%</td><td class="num"><strong>49.7%</strong></td></tr>
+<tr class="success-row"><td>2</td><td>신세계아울렛여주(직)</td><td class="num">171</td><td class="num">59</td><td class="num">265%</td><td class="num">38.1%</td></tr>
+<tr><td>3</td><td><strong>온라인쇼핑몰(직)</strong></td><td class="num">97</td><td class="num"><strong>57</strong></td><td class="num">187%</td><td class="num"><strong>64.7%</strong></td></tr>
+<tr><td>4</td><td>스타필드하남(직)</td><td class="num">146</td><td class="num">54</td><td class="num">254%</td><td class="num">40.6%</td></tr>
+<tr><td>5</td><td>네이버스토어(제휴몰)</td><td class="num">121</td><td class="num">46</td><td class="num"><span class="badge-new">신규</span></td><td class="num">42.0%</td></tr>
+<tr><td>6</td><td>롯데월드타워</td><td class="num">146</td><td class="num">40</td><td class="num">+103%</td><td class="num">29.9%</td></tr>
+<tr><td>7</td><td>신세계타임스퀘어</td><td class="num">91</td><td class="num">27</td><td class="num"><span class="badge-new">신규</span></td><td class="num">32.9%</td></tr>
+<tr><td>8</td><td>신세계강남</td><td class="num">89</td><td class="num">24</td><td class="num"><span class="badge-new">신규</span></td><td class="num">29.5%</td></tr>
+<tr><td>9</td><td>현대무역(close)</td><td class="num">70</td><td class="num">19</td><td class="num"><span class="badge-new">신규</span></td><td class="num">29.3%</td></tr>
+<tr><td>10</td><td>더현대서울</td><td class="num">84</td><td class="num">17</td><td class="num">+106%</td><td class="num">22.5%</td></tr>
+</tbody>
+</table>
+</div>
+
+<div class="section">
+<div class="section-title">📊 채널별 점당매출</div>
+<table>
+<tbody>
+<tr><th>채널</th><th class="num">매장수</th><th class="num">점당매출</th><th class="num">YoY</th></tr>
+<tr><td>백화점</td><td class="num">20개(+3)</td><td class="num">53백만</td><td class="num text-green">143%</td></tr>
+<tr><td>직영점</td><td class="num">3개(+1)</td><td class="num">72백만</td><td class="num text-green">120%</td></tr>
+<tr><td>아울렛</td><td class="num">7개(-)</td><td class="num">70백만</td><td class="num text-red">92%</td></tr>
+<tr class="total-row"><td><strong>TOTAL</strong></td><td class="num"><strong>30개(+4)</strong></td><td class="num"><strong>59백만</strong></td><td class="num text-green"><strong>118%</strong></td></tr>
+</tbody>
+</table>
+</div>
+
+<div class="section">
+<div class="section-title">📊 체인별 실적 구조 분석</div>
+<table>
+<tbody>
+<tr><th>체인</th><th class="num">매출YoY</th><th class="num">손익YoY</th><th class="num">이익률</th><th class="num">평가</th></tr>
+<tr class="success-row"><td>신세계</td><td class="num">+179%</td><td class="num">+198%</td><td class="num">55.0%</td><td class="num"><span class="badge-up">최우수</span></td></tr>
+<tr class="success-row"><td>스타필드</td><td class="num">+44%</td><td class="num">+50%</td><td class="num text-green">79.3%</td><td class="num"><span class="badge-up">최우수</span></td></tr>
+<tr><td>현대</td><td class="num">+39%</td><td class="num">+45%</td><td class="num">54.1%</td><td class="num"><span class="badge-up">우수</span></td></tr>
+<tr><td>롯데</td><td class="num">+36%</td><td class="num">+43%</td><td class="num">54.6%</td><td class="num"><span class="badge-up">우수</span></td></tr>
+</tbody>
+</table>
+<div style="font-size:7px;color:#718096;margin-top:2px">※ 전 체인 손익 성장률 > 매출 성장률 — 브랜드 수익성 구조 개선 확인</div>
+</div>
+
+</div>
+<div class="right">
+
+<div class="section">
+<div class="section-title">⚠️ 적자/저수익 매장 분석</div>
+<table style="font-size:7.5px">
+<tbody>
+<tr><th>매장명</th><th class="num">당월이익</th><th class="num">시즌이익</th><th class="num">매출YoY</th><th class="num">할인변화</th><th class="num">판단</th></tr>
+<tr class="danger-row"><td><strong>커넥트현대청주(직)</strong></td><td class="num text-red">-9.0</td><td class="num text-green">+39.5</td><td class="num"><span class="badge-new">신규</span></td><td class="num">45.1%</td><td class="num"><span class="badge-down">클로징 검토</span></td></tr>
+<tr class="danger-row"><td><strong>스타필드수원(직)</strong></td><td class="num text-red">-8.1</td><td class="num">+32.7</td><td class="num">-14.4%</td><td class="num">-22.8%p</td><td class="num"><span class="badge-warn">모니터링</span></td></tr>
+<tr class="warn-row"><td>현대신촌</td><td class="num">0</td><td class="num text-green">+51.8</td><td class="num">-11.3%</td><td class="num">-29.3%p</td><td class="num"><span class="badge-warn">모니터링</span></td></tr>
+<tr><td>현대천호</td><td class="num">+4.1</td><td class="num text-green">+101.0</td><td class="num">-10.6%</td><td class="num">-16.0%p</td><td class="num"><span class="badge-up">개선</span></td></tr>
+<tr><td>신세계대구(close)</td><td class="num">-0.3</td><td class="num text-green">+129.0</td><td class="num">-</td><td class="num">-</td><td class="num"><span class="badge-warn">폐점진행</span></td></tr>
+<tr class="success-row"><td>현대목동</td><td class="num">+5.1</td><td class="num text-green"><strong>+161.9</strong></td><td class="num">-41.5%</td><td class="num text-green">-34.3%p</td><td class="num"><span class="badge-up">양호</span></td></tr>
+</tbody>
+</table>
+</div>
+
+<div class="box box-red">
+<div class="box-title red">🚨 커넥트현대청주 — 클로징 검토 대상</div>
+<ul>
+<li>직접이익 -9.0백만원, 이익률 <strong>-138.2%</strong> — 전 매장 중 최악</li>
+<li>PY 데이터 없어 YoY 비교 불가, 할인율 45.1% 고단가 브랜드 정책과 괴리</li>
+<li>시즌 누적 +39.5백만원 흑자이나 당월 적자 규모 심각</li>
+<li style="color:#c53030"><strong>→ 월별 손익 3개월 추이 확인 후 손익분기 미달 시 클로징</strong></li>
+</ul>
+</div>
+
+<div class="box box-yellow">
+<div class="box-title yellow">📋 채널 집중도 리스크</div>
+<table style="font-size:7.5px">
+<tbody>
+<tr><th>채널</th><th class="num">Top5 집중도</th><th class="num">1위 매장(비중)</th><th class="num">리스크</th></tr>
+<tr><td>백화점</td><td class="num">50.4%</td><td class="num">롯데월드타워(15.8%)</td><td class="num"><span class="badge-up">분산</span></td></tr>
+<tr class="danger-row"><td>아울렛</td><td class="num">103.9%</td><td class="num">현대김포(45.2%)</td><td class="num"><span class="badge-down">초집중</span></td></tr>
+<tr class="danger-row"><td>자사몰</td><td class="num">100%</td><td class="num">온라인쇼핑몰(100%)</td><td class="num"><span class="badge-down">초집중</span></td></tr>
+<tr class="danger-row"><td>제휴몰</td><td class="num">100%</td><td class="num">네이버(40.8%)</td><td class="num"><span class="badge-down">초집중</span></td></tr>
+<tr class="danger-row"><td>직영점</td><td class="num">100%</td><td class="num">하남(117.6%)</td><td class="num"><span class="badge-down">초집중</span></td></tr>
+</tbody>
+</table>
+</div>
+
+<div class="box box-purple">
+<div class="box-title purple">🔄 일시적 부진형 매장 (시즌 양호)</div>
+<ul>
+<li><strong>현대목동</strong>: 당월 -41.5% 역성장이나 시즌 직접이익 <strong>+161.9백만원(최고)</strong>, 할인율 9.0% 최저 수준</li>
+<li><strong>현대신촌</strong>: 당월 손익분기이나 시즌 +51.8백만원, 할인율 38.6%→9.4%(-29.3%p) ASP 방어 성공</li>
+<li><strong>현대천호</strong>: 시즌 +101.0백만원 흑자, 할인율 -16.0%p 축소 — 정상 회복 궤도</li>
+</ul>
+</div>
+
+<div class="insight-box">
+<div class="insight-title">💡 매장 전략 핵심 메시지</div>
+<div style="font-size:7.5px;line-height:1.4">전 6개 분석 대상 매장 중 <strong>시즌 기준 적자 매장 0개</strong>(최소 +32.7백만원~최대 +161.9백만원). 2월 당월 적자는 FW 시즌 마감 구간의 구조적 특성으로, 할인 축소 기조(-8.6~-34.3%p)가 시즌 이익 개선에 기여 중입니다. <strong>커넥트현대청주 1개만 할인 과다형(45.1%)</strong>으로 클로징 검토 필요하며, 나머지는 개선 가능형으로 판단됩니다.</div>
+</div>
+
+</div>
+</div>
+
+<!-- FOOTER -->
+<div class="footer">DUVETICA 브랜드 2026년 2월 경영 보고서 | F&amp;F Corporation 경영관리팀 FP&amp;A | Confidential</div>
+
+</div><!-- /wrap -->
+
+<a href="#top" class="scroll-top">▲</a>
+</body>
+</html>

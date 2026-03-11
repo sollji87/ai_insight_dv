@@ -1,5 +1,5 @@
-import ReportContent from "@/components/ReportContent";
+import { redirect } from "next/navigation";
 
 export default function Home() {
-  return <ReportContent />;
+  redirect("/reports/DUVETICA_Report_2026_02.html");
 }
