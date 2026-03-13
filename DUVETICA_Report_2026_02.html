@@ -2,6 +2,7 @@
 <html lang="ko">
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>DUVETICA 브랜드 2026년 2월 경영 보고서</title>
 <style>
 * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -66,6 +67,9 @@ li ul { margin-top: 1px; }
 .nav { position: sticky; top: 0; z-index: 100; background: linear-gradient(135deg,#1a1a2e,#16213e); display: flex; flex-wrap: wrap; justify-content: center; gap: 6px; padding: 8px 15px; box-shadow: 0 2px 8px rgba(0,0,0,.2); }
 .nav a { color: #fff; font-size: 9px; text-decoration: none; padding: 4px 10px; border-radius: 3px; transition: background .2s; }
 .nav a:hover { background: rgba(255,255,255,.2); }
+.nav .month-link { border: 1px solid rgba(255,255,255,.45); font-weight: bold; letter-spacing: .2px; }
+.nav .month-link.active-month { background: rgba(255,255,255,.3); }
+.nav .month-sep { color: rgba(255,255,255,.7); align-self: center; font-size: 9px; user-select: none; }
 .scroll-top { position: fixed; bottom: 20px; right: 20px; width: 36px; height: 36px; background: #1a1a2e; color: #fff; border-radius: 50%; display: flex; justify-content: center; align-items: center; font-size: 14px; text-decoration: none; box-shadow: 0 2px 10px rgba(0,0,0,.25); transition: background .2s; }
 .scroll-top:hover { background: #16213e; }
 .footer { text-align: center; color: #a0aec0; font-size: 7px; border-top: 1.5px solid #cbd5e0; margin-top: 20px; padding-top: 8px; }
@@ -86,6 +90,9 @@ li ul { margin-top: 1px; }
 </head>
 <body>
 <div class="nav" id="top">
+<a class="month-link" href="DUVETICA_Report_2026_01.html">26.01</a>
+<a class="month-link active-month" href="DUVETICA_Report_2026_02.html">&#10003; 26.02</a>
+<span class="month-sep">|</span>
 <a href="#sec1">🎯 전략 &amp; Action</a>
 <a href="#sec2">📊 Executive Summary</a>
 <a href="#sec3">📈 채널분석</a>
@@ -99,7 +106,7 @@ li ul { margin-top: 1px; }
 <div class="header">
 <div class="header-left">
 <h1>🧥 DUVETICA 브랜드 2026년 2월 경영 보고서</h1>
-<p>경영관리팀 FP&amp;A | 보고일: 2026년 3월 11일</p>
+<p>경영관리팀 FP&amp;A | 보고일: 2026년 3월 16일</p>
 </div>
 <div class="header-right">
 <div class="big-num">2,172<span>백만원</span></div>
@@ -115,11 +122,11 @@ li ul { margin-top: 1px; }
 <div class="box box-red">
 <div class="box-title red">⚡ 즉시 실행 (1개월 내)</div>
 <ul>
-<li><strong>S/S 시즌 전환 가속화</strong>
+<li><strong>S/S 시즌 전환 가속화 + 26SS 모니터링</strong>
 <ul>
-<li>다운 시즌 종료 대비, 아우터(YoY +47.6%)·티셔츠(+37.3%) 매장 비중 확대</li>
-<li>경량 다운·트랜지션 아우터로 다운 수요 자연스럽게 연결</li>
-<li>차기시즌 의류 533백만원(YoY 224%) — 조기 투입 효과 극대화</li>
+<li>26SS 판매율 11.5%(+1.5%p), 판매TAG 180%로 상승추세 — WJ 발주액 83억(전체 40%)</li>
+<li>26SS 할인율 9.1%(목표 대비 다소 높음) — 신규가입 10%쿠폰 + 김지원 착장 10%쿠폰 영향</li>
+<li>아우터(YoY +47.6%)·티셔츠(+37.3%) 매장 비중 확대, 경량 다운·트랜지션 아우터 연결</li>
 </ul>
 </li>
 <li><strong>SSF샵 급감 원인 규명 및 대응</strong>
@@ -146,22 +153,28 @@ li ul { margin-top: 1px; }
 <div class="box box-yellow">
 <div class="box-title yellow">📋 단기 실행 (1분기 내)</div>
 <ul>
-<li><strong>트레이닝·신발 카테고리 전략적 판단</strong>
+<li><strong>신발·용품 카테고리 급감 모니터링</strong>
 <ul>
-<li>트레이닝 YoY -90.9%, 운동화 -73.0% — 상품 철수인지 수요 이탈인지 원인 파악</li>
+<li>운동화 -73.0%, 시즌슈즈 -37.8%, 시즌모자 -85.4% — 신발·용품 전반 동반 급감</li>
 <li>프리미엄 포지셔닝에 맞는 카테고리 포트폴리오 재설계</li>
+</ul>
+</li>
+<li><strong>제휴몰 운영 방향 전환</strong>
+<ul>
+<li>공동 프로모션(쿠폰 비용 분담 등) 중단 — 브랜드데이 외 이월상품 위주 운영</li>
+<li>과시즌 재고 감소 + 할인율 통제로 전년(3년차 재고 70~80% 할인) 대비 매출 영향 감안</li>
+</ul>
+</li>
+<li><strong>무신사 수수료 인하 + 29CM 신규 입점</strong>
+<ul>
+<li>무신사 33%(반품비·리컴퍼니 5% 포함) → MOU 통해 3~4%p 인하 논의(4월 적용 기대)</li>
+<li>29CM 부티크 본부 신규 입점 예정 — 리컴퍼니 수수료 제외 26% 마진</li>
 </ul>
 </li>
 <li><strong>자사몰 고수익 구조 확대</strong>
 <ul>
-<li>자사몰 직접이익률 64.7% vs 제휴몰 40.5% → 트래픽 확대 투자</li>
-<li>자사몰 매출 97백만(YoY 182%) — 성장 모멘텀 유지하며 규모 확대</li>
-</ul>
-</li>
-<li><strong>제휴몰 수수료 구조 재편</strong>
-<ul>
-<li>무신사 수수료율 33.3%(YoY +6.2%p) → 30% 이하 재협상 또는 투입 축소</li>
-<li>네이버스토어 121백만원(신규) 즉시 제휴몰 1위 — D2C 연계 확대</li>
+<li>자사몰 직접이익률 64.7%(영업이익률 50%↑) vs 제휴몰 40.5% → 핵심 채널 집중 관리</li>
+<li>자사몰 매출 97백만(YoY 182%), 3월 실적 양호 — 성장 모멘텀 유지</li>
 </ul>
 </li>
 </ul>
@@ -173,6 +186,13 @@ li ul { margin-top: 1px; }
 <div class="box box-green">
 <div class="box-title green">🎯 중장기 전략 (상반기)</div>
 <ul>
+<li><strong>26SS '체질 개선' — 정상 신상품 중심 전환</strong>
+<ul>
+<li>정상상품 매출 비중: 작년 SS 35% → 올해 3월 60%로 상승</li>
+<li>26SS 총 발주액 220억(전년비 190%) — 판매율 목표 60%, 현실적 달성 50%</li>
+<li>광고 예산 약 6억(월평균 1억), ROAS 목표 350~500%</li>
+</ul>
+</li>
 <li><strong>다운 의존도 분산 로드맵 수립</strong>
 <ul>
 <li>다운 편중도 61.0% — 시즌 전환 시 매출 급감 리스크 구조</li>
@@ -180,16 +200,11 @@ li ul { margin-top: 1px; }
 <li>여름 시즌까지 커버 가능한 비다운 의류 라인업 강화</li>
 </ul>
 </li>
-<li><strong>백화점 성장 모멘텀 강화</strong>
+<li><strong>오프라인 매장 운영 고도화</strong>
 <ul>
-<li>백화점 YoY 167%, 비중 48.9%로 핵심 채널 → S/S 신상품 우선 투입</li>
-<li>신규 출점 8개 매장이 채널 YoY 증분의 84% 기여 — 존치 여부 검증</li>
-</ul>
-</li>
-<li><strong>채널 집중도 분산</strong>
-<ul>
-<li>직영점 스타필드하남 67.3% 독점 → 강남사옥(신규 45백만) 육성</li>
-<li>아울렛 김포·여주 2개점 83.4% 집중 → 기흥·시흥 이익률 개선</li>
+<li>26SS 시즌 25개 매장 운영(백 16, 몰 2, 아울렛 6, 강남직영 1)</li>
+<li>상위 매장 대부분 1년↑ 팝업 → FW 시즌 성과 기반 정규 매장 전환 목표</li>
+<li>수원·천호·신촌 당월 적자 매장 SS 시즌 적자폭 관리 필요</li>
 </ul>
 </li>
 </ul>
@@ -205,14 +220,15 @@ li ul { margin-top: 1px; }
 <tr style="border-bottom:1px solid #4a5568"><td style="color:#e2e8f0;border:none">영업이익률</td><td class="num" style="border:none">2.9%</td><td class="num" style="border:none">-15.5%</td><td class="num" style="border:none;color:#48bb78">+18.4%p</td></tr>
 <tr style="border-bottom:1px solid #4a5568"><td style="color:#e2e8f0;border:none">할인율</td><td class="num" style="border:none">26.1%</td><td class="num" style="border:none">44.7%</td><td class="num" style="border:none;color:#48bb78">-18.6%p</td></tr>
 <tr style="border-bottom:1px solid #4a5568"><td style="color:#e2e8f0;border:none">25F 판매율</td><td class="num" style="border:none">50.3%</td><td class="num" style="border:none">45.2%</td><td class="num" style="border:none;color:#48bb78">+5.1%p</td></tr>
-<tr><td style="color:#e2e8f0;border:none">25F M/U(매출)</td><td class="num" style="border:none">5.88</td><td class="num" style="border:none">5.20</td><td class="num" style="border:none;color:#48bb78">+0.68</td></tr>
+<tr style="border-bottom:1px solid #4a5568"><td style="color:#e2e8f0;border:none">25F M/U(매출)</td><td class="num" style="border:none">5.88</td><td class="num" style="border:none">5.20</td><td class="num" style="border:none;color:#48bb78">+0.68</td></tr>
+<tr><td style="color:#e2e8f0;border:none">26S 목표 판매율</td><td class="num" style="border:none">60%</td><td class="num" style="border:none">-</td><td class="num" style="border:none;color:#a0aec0">-</td></tr>
 </tbody>
 </table>
 </div>
 
 <div class="box box-blue">
 <div class="box-title blue">📝 경영진 핵심 메시지</div>
-<div style="font-size:8px;line-height:1.45">2월 실판매출 2,172백만원(YoY 126%)으로 <strong>전 채널 할인율 대폭 축소(-13.8%p)</strong>에도 견조한 성장을 유지하며, 연누적 영업이익 159백만원으로 <strong>흑자전환</strong>에 성공했습니다. <strong>백화점(+65.8%)</strong>이 신규 출점 효과로 핵심 성장 채널을 견인하고 있으나, <strong>판매수량 -3.5% 감소</strong>로 ASP 의존 성장의 지속가능성 점검이 필요합니다. <strong>제휴몰 역성장(-37.7%)</strong>에 대한 원인 파악과 <strong>다운 편중도 61%</strong> 완화를 위한 S/S 전환 가속화가 핵심 과제입니다.</div>
+<div style="font-size:8px;line-height:1.45">2월 실판매출 2,172백만원(YoY 126%)으로 <strong>전 채널 할인율 대폭 축소(-13.8%p)</strong>에도 견조한 성장을 유지하며, 연누적 영업이익 159백만원으로 <strong>흑자전환</strong>에 성공했습니다. <strong>백화점(+66.8%)</strong>이 신규 출점 효과로 핵심 성장 채널을 견인하고 있으나, <strong>판매수량 -3.5% 감소</strong>로 ASP 의존 성장의 지속가능성 점검이 필요합니다. <strong>26SS 판매율 11.5%</strong>(+1.5%p)로 상승추세이며, <strong>제휴몰 역성장(-21.0%)</strong> 대응과 <strong>다운 편중도 61%</strong> 완화를 위한 비다운 라인업 강화가 핵심 과제입니다.</div>
 </div>
 
 </div>
@@ -325,8 +341,8 @@ li ul { margin-top: 1px; }
 <ul>
 <li><strong>판매수량 -3.5% 감소</strong> 매출 성장이 ASP 의존(단가 상승) 구조 — 볼륨 기반 성장 전환 필요</li>
 <li><strong>다운 편중도 61.0%</strong> 단일 카테고리가 6할 이상 → 시즌 전환 시 급감 리스크</li>
-<li><strong>제휴몰 역성장 -37.7%</strong> SSF샵 -76.5%(-150백만원) 급감, 무신사 -34.3%, SSG닷컴 -30.5%</li>
-<li><strong>트레이닝 -90.9% 급감</strong> 5.4억→0.5억 사실상 소멸 수준, 운동화 -73.0% 동반 급감</li>
+<li><strong>제휴몰 역성장 -21.0%</strong> SSF샵 -76.5%(-150백만원) 급감, 무신사 -34.3%, SSG닷컴 -30.5%</li>
+<li><strong>신발·용품 전반 급감</strong> 운동화 -73.0%, 시즌슈즈 -37.8%, 시즌모자 -85.4% 동반 급감</li>
 <li><strong>ACC 재고주수 146.3주</strong> 가방 187.8주, 기타ACC 287.2주 — 전년 79.4주 대비 급증</li>
 </ul>
 </div>
@@ -335,8 +351,9 @@ li ul { margin-top: 1px; }
 <div class="box-title green">🟢 Positive Signal</div>
 <ul>
 <li><strong>연누적 흑자전환</strong> 영업이익 159백만원(전년 -573백만원 → +732백만원 개선)</li>
+<li><strong>FW시즌 누적 14.7억 흑자</strong> 전년비 +58.7억 개선 — 첫 흑자 전환 시즌</li>
 <li><strong>할인율 대폭 개선</strong> 당월 28.9%(전년 42.7%, -13.8%p) / 연누적 26.1%(-18.6%p)</li>
-<li><strong>백화점 +65.8%</strong> 신규 출점 효과 + 비중 48.9%로 핵심 성장 견인</li>
+<li><strong>백화점 +66.8%</strong> 신규 출점 효과 + 비중 47.9%로 핵심 성장 견인</li>
 <li><strong>자사몰 YoY 182%</strong> 직접이익률 64.7%, 전 채널 최고 수익 채널</li>
 <li><strong>차기시즌 의류 YoY 224%</strong> 533백만원으로 S/S 조기 투입 성과</li>
 <li><strong>전 체인 손익 성장 > 매출 성장</strong> 롯데·현대·신세계·스타필드 모두 이익률 개선 확인</li>
@@ -349,8 +366,10 @@ li ul { margin-top: 1px; }
 <li>당월 적자 -314백만원이나 전년(-568백만원) 대비 적자폭 대폭 축소(+255백만원)</li>
 <li>영업비 817백만원(YoY 93%, -59백만원) — 영업비율 41.3%(전년 55.6%, -14.3%p)</li>
 <li>매출원가율 21.4%(전년 23.4%, -2.0%p) 원가경쟁력 지속 강화</li>
-<li>25F 판매율 50.3%(전년 45.2%, +5.1%p) — 다운점퍼 61.0%(+7.8%p)</li>
-<li>기말재고 538.3억(YoY 131%) — 차기시즌 의류 166% 증가(S/S 선입고)</li>
+<li>25FW 판매율 50.3%(+5.1%p), 판매TAG 203%, 재고 160억(141%) — DJ 판매율 61%, 재고 85억(128%)</li>
+<li>26SS 체질개선 진행 — 정상상품 매출 비중 35%(작년SS) → 60%(올해 3월)</li>
+<li>26SS 25개 매장 운영, 상위 매장 팝업→정규 전환 목표 / 광고 6억·ROAS 350~500%</li>
+<li>이월 재고 연간 300~400억 규모, 현 보유 재고로 1년 운영 충분</li>
 </ul>
 </div>
 
@@ -398,13 +417,15 @@ li ul { margin-top: 1px; }
 <div class="section">
 <div class="section-title">⚠️ 부진/리스크 채널 분석</div>
 <div class="box box-red" style="margin-bottom:5px">
-<div class="box-title red">제휴몰 — YoY 79%, 역성장 심화</div>
+<div class="box-title red">제휴몰 — YoY 79%, 역성장 + 운영 방향 전환</div>
 <ul>
-<li>매출 307백만원(-37.7%, -약 1.4억원) — 전 채널 중 유일한 역성장</li>
+<li>매출 307백만원(-21.0%, -약 0.8억원) — 전 채널 중 유일한 역성장</li>
 <li>SSF샵 46백만원(-76.5%) 제휴몰 역성장 최대 원인</li>
 <li>네이버스토어 121백만원(신규) 제휴몰 1위 등극 — 기존 채널 이탈 시그널</li>
-<li>무신사 수수료 33.3%(+6.2%p), 이익률 35.6%로 제휴몰 내 최저</li>
-<li style="color:#c53030"><strong>→ 네이버스토어 제외 실질 감소 -204백만원, 채널 재편 필요</strong></li>
+<li><strong>운영 방향 전환</strong>: 공동 프로모션 중단, 브랜드데이 외 이월상품 위주 운영(아울렛과 유사)</li>
+<li>과시즌 재고 감소 + 할인율 통제로 전년 대비 매출 감소는 구조적 요인</li>
+<li><strong>29CM 신규 입점</strong> 예정(부티크 본부, 리컴퍼니 제외 26% 마진)</li>
+<li style="color:#c53030"><strong>→ 무분별한 할인 지양, 정상채널(자사몰·백화점) 중심 성장으로 전환</strong></li>
 </ul>
 </div>
 <div class="box box-yellow" style="margin-bottom:5px">
@@ -580,6 +601,10 @@ li ul { margin-top: 1px; }
 <tr class="total-row"><td><strong>평균</strong></td><td class="num"><strong>146.3주</strong></td><td class="num">79.4주</td><td class="num text-red">+66.9주</td></tr>
 </tbody>
 </table>
+<ul style="font-size:7.5px;margin:4px 0 0 12px">
+<li><strong>가방</strong>: TAG 24억 보유, 추가 발주 없이 연중 판매로 재고 효율 개선 예정(온라인 판매 효율 높음)</li>
+<li><strong>신발</strong>: TAG 10억 중 방한화 7억 — 실제 판매 가능 재고 약 2억원 수준</li>
+</ul>
 </div>
 
 <div class="insight-box">
@@ -683,7 +708,6 @@ li ul { margin-top: 1px; }
 <tr><th>채널</th><th class="num">Top5 집중도</th><th class="num">1위 매장(비중)</th><th class="num">리스크</th></tr>
 <tr><td>백화점</td><td class="num">50.4%</td><td class="num">롯데월드타워(15.8%)</td><td class="num"><span class="badge-up">분산</span></td></tr>
 <tr class="danger-row"><td>아울렛</td><td class="num">103.9%</td><td class="num">현대김포(45.2%)</td><td class="num"><span class="badge-down">초집중</span></td></tr>
-<tr class="danger-row"><td>자사몰</td><td class="num">100%</td><td class="num">온라인쇼핑몰(100%)</td><td class="num"><span class="badge-down">초집중</span></td></tr>
 <tr class="danger-row"><td>제휴몰</td><td class="num">100%</td><td class="num">네이버(40.8%)</td><td class="num"><span class="badge-down">초집중</span></td></tr>
 <tr class="danger-row"><td>직영점</td><td class="num">100%</td><td class="num">하남(117.6%)</td><td class="num"><span class="badge-down">초집중</span></td></tr>
 </tbody>

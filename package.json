@@ -3,10 +3,11 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "dev": "next dev --turbopack",
-    "build": "next build",
+    "dev": "npm run sync:reports && next dev --turbopack",
+    "build": "npm run sync:reports && next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "sync:reports": "node scripts/sync-reports.js"
   },
   "dependencies": {
     "next": "^15.1.0",
@@ -17,8 +18,9 @@
     "@types/node": "^22.0.0",
     "@types/react": "^19.0.0",
     "@types/react-dom": "^19.0.0",
-    "typescript": "^5.7.0",
     "eslint": "^9.0.0",
-    "eslint-config-next": "^15.1.0"
+    "eslint-config-next": "^15.1.0",
+    "puppeteer": "^24.37.2",
+    "typescript": "^5.7.0"
   }
 }
