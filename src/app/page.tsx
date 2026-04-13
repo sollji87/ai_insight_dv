@@ -12,5 +12,5 @@ export default function Home() {
     .sort()
     .at(-1);
 
-  redirect(`/reports/${latestReport ?? "DUVETICA_Report_2026_02.html"}`);
+  redirect(`/reports/${latestReport ?? "DUVETICA_Report_2026_03.html"}`);
 }
