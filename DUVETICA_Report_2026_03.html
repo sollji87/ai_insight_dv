@@ -52,9 +52,8 @@
     .nav { position: sticky; top: 0; background: linear-gradient(135deg, #1a1a2e, #16213e); padding: 8px 15px; z-index: 100; display: flex; justify-content: center; gap: 6px; flex-wrap: wrap; box-shadow: 0 2px 8px rgba(0,0,0,0.2); }
     .nav a { color: white; text-decoration: none; font-size: 9px; padding: 4px 10px; border-radius: 3px; transition: background 0.2s; }
     .nav a:hover { background: rgba(255,255,255,0.2); }
-    .nav .month-link { border: 1px solid rgba(255,255,255,0.45); font-weight: bold; letter-spacing: 0.2px; }
-    .nav .month-link.active-month { background: rgba(255,255,255,0.3); }
-    .nav .month-sep { color: rgba(255,255,255,0.7); align-self: center; font-size: 9px; user-select: none; }
+    .nav .month-picker { display: flex; align-items: center; }
+    .nav .month-select { min-width: 88px; border: 1px solid rgba(255,255,255,0.45); background: rgba(255,255,255,0.12); color: white; font-size: 9px; font-weight: bold; letter-spacing: 0.2px; border-radius: 3px; padding: 4px 10px; outline: none; }
     .scroll-top { position: fixed; bottom: 20px; right: 20px; background: #1a1a2e; color: white; width: 36px; height: 36px; border-radius: 50%; display: flex; align-items: center; justify-content: center; text-decoration: none; font-size: 14px; box-shadow: 0 2px 10px rgba(0,0,0,0.25); }
     .scroll-top:hover { background: #16213e; }
     .footer { margin-top: 20px; padding-top: 8px; border-top: 1.5px solid #cbd5e0; font-size: 7px; color: #a0aec0; text-align: center; }
@@ -67,10 +66,13 @@
 <body>
 
 <div class="nav" id="top">
-  <a class="month-link" href="DUVETICA_Report_2026_01.html">26.01</a>
-  <a class="month-link" href="DUVETICA_Report_2026_02.html">26.02</a>
-  <a class="month-link active-month" href="DUVETICA_Report_2026_03.html">&#10003; 26.03</a>
-  <span class="month-sep">|</span>
+  <div class="month-picker">
+    <select class="month-select" aria-label="월간 보고서 선택" onchange="if (this.value) window.location.href=this.value;">
+      <option value="DUVETICA_Report_2026_01.html">26.01</option>
+      <option value="DUVETICA_Report_2026_02.html">26.02</option>
+      <option value="DUVETICA_Report_2026_03.html" selected>26.03</option>
+    </select>
+  </div>
   <a href="#sec1">Overview</a>
   <a href="#sec2">판정표</a>
   <a href="#sec3">4월 추세</a>

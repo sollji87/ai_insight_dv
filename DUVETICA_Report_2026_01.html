@@ -141,17 +141,21 @@
       transition: background 0.2s;
     }
     .nav a:hover { background: rgba(255,255,255,0.2); }
-    .nav .month-link {
+    .nav .month-picker {
+      display: flex;
+      align-items: center;
+    }
+    .nav .month-select {
+      min-width: 88px;
       border: 1px solid rgba(255,255,255,0.45);
+      background: rgba(255,255,255,0.12);
+      color: white;
+      font-size: 9px;
       font-weight: bold;
       letter-spacing: 0.2px;
-    }
-    .nav .month-link.active-month { background: rgba(255,255,255,0.3); }
-    .nav .month-sep {
-      color: rgba(255,255,255,0.7);
-      align-self: center;
-      font-size: 9px;
-      user-select: none;
+      border-radius: 3px;
+      padding: 4px 10px;
+      outline: none;
     }
     
     .scroll-top {
@@ -200,10 +204,13 @@
 <body>
 
 <div class="nav" id="top">
-  <a class="month-link active-month" href="DUVETICA_Report_2026_01.html">&#10003; 26.01</a>
-  <a class="month-link" href="DUVETICA_Report_2026_02.html">26.02</a>
-  <a class="month-link" href="DUVETICA_Report_2026_03.html">26.03</a>
-  <span class="month-sep">|</span>
+  <div class="month-picker">
+    <select class="month-select" aria-label="월간 보고서 선택" onchange="if (this.value) window.location.href=this.value;">
+      <option value="DUVETICA_Report_2026_01.html" selected>26.01</option>
+      <option value="DUVETICA_Report_2026_02.html">26.02</option>
+      <option value="DUVETICA_Report_2026_03.html">26.03</option>
+    </select>
+  </div>
   <a href="#sec1">🎯 전략 & Action</a>
   <a href="#sec2">📊 Executive Summary</a>
   <a href="#sec3">📈 채널분석</a>
